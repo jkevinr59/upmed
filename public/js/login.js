@@ -1,0 +1,16 @@
+$("#trial1-button").click(function(){
+    $("#entry-login").hide();
+    $("#trial-panel").fadeIn(200);
+});
+$("#login1-button").click(function(){
+    $("#entry-login").hide();
+    $("#login-panel").fadeIn(200);
+});
+$("#login2-button").click(function(){
+    $("#trial-panel").hide();
+    $("#login-panel").fadeIn(200);
+});
+$("#trial2-button").click(function(){
+    $("#login-panel").hide();
+    $("#trial-panel").fadeIn(200);
+});

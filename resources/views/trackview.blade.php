@@ -7,12 +7,31 @@
 
 <div class="row" style="margin-top: 80px;">
 	<div class="well custom-description">
+		<div class="row">
+			<div class="col-xs-7">
+				<p>Kunjungan ke Dokter</p>
+				<b>Berkunjung ke Dokter Bambang</b>
+			</div>
+			<div class="col-xs-4 col-xs-offset-1">
+				<div class="custom-desc-date">
+				<h4 class="text-center">01<br>FEB</h4>
+				</div>			
+			</div>
+		</div>
+		<div class="row">
+			<ul class="nav nav-tabs">
+  				<li class="active"><a href="#">Detail</a></li>
+  				<li><a href="#">Recommend</a></li>
+  				<li><a href="#">Share</a></li>
+			</ul>
+		</div>
+	<!--
 		<h4>1 February 2018</h4>
 		<b>Title</b>
 		<p id="title-detail">Berkunjung ke Dokter Bambang</p>
 		<b>Deskripsi</b>
 		<p id="description-detail"> Ditemukan alergi makanan yang mengandung susu</p>
-		<button type="button" class="btn btn-info btn-sm">Edit</button>					
+		<button type="button" class="btn btn-info btn-sm">Edit</button>-->					
 	</div> 
 	<div class="well custom-track-filter">
 		<div class="col-xs-3 col-xs-offset-1">

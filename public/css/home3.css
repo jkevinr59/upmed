@@ -79,6 +79,10 @@
 	height: 80px;
 	z-index: 101;
 }
+.custom-desc-date{
+	border-style: solid;
+	border-color: #cccccc;
+}
 .service-panel
 {
 margin-top:10px;

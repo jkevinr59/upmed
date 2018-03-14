@@ -32,7 +32,22 @@
         </div>
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2 layout-profile-info">
-                
+                <div class="row">
+                    <div class="col-xs-12">
+                        <center><b>Username:</b></center>
+                        <center>User1</center>
+                    </div>          
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <center><b>Gender:</b></center>
+                        <center>Male</center>
+                    </div>
+                    <div class="col-xs-6">
+                        <center><b>Age:</b></center>
+                        <center>22</center>
+                    </div>    
+                </div>
             </div>
         </div>
         <div class="row">
@@ -40,7 +55,70 @@
                 <button class="layout-health-button"><i class="fa fa-angle-left"></i></button>
             </div>
             <div class="col-xs-8 layout-personal-health">
-                
+                <div class="row">
+                    <div class="col-xs-12">
+                        <center><h4>Personal Health</h4></center>
+                    </div>
+                </div>
+                <!-- Group B-->
+                <div id="health-group-b" class="row layout-personal-group">
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-6" style="height: 42px">
+                                <center><b>Blood Pressure</b></center>
+                                
+                            </div>
+                            <div class="col-xs-6" style="height: 42px;line-height: 40px;">
+                                <center style=""><b>Cholesterol</b></center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <center>112</center>
+                                
+                            </div>
+                            <div class="col-xs-6">
+                                <center>155</center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Group B Ends Here-->
+                <!-- Group C-->
+                <div id="health-group-c" class="row layout-personal-group">
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <b>Alergi:</b>
+                                    <p>
+                                       + Udang<br>
+                                       + Analgesik<br>
+                                       + Debu<br>
+                                    </p>  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <b>Riwayat Opname</b>
+                                <p>
+                                    + 14 November 18 (3 hari)
+                                    + 11 Maret 18 (2 hari)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <span>Asma <i class="fas fa-check"></i></span>
+                            </div>
+                            <div class="col-xs-6">
+                                <span>Diabetes <i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Group C Ends Here -->
             </div>
             <div class="col-xs-2" style="padding-left:10px;">
                 <button class="layout-health-button" style="margin-left:0px;"><i class="fa fa-angle-right"></i></button>
@@ -59,7 +137,7 @@
                         <div class="col-xs-4 col-xs-offset-8 layout-tool-bar"></div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-6 col-xs-offset-6 layout-menu-bar">
+                        <div class="col-xs-6 col-xs-offset-6 layout-menu-bar nav navbar-top-links">
                            <ul>
                                 <li><a href="home">Dashboard</a></li>
                                 <li><a href="track">Track</a></li>
@@ -77,5 +155,20 @@
         </div>        
     </div>
 </div>
-@yield('js')
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+    <script src="public/js/jquery.metisMenu.js"></script>
+
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <script src="public/js/raphael-2.1.0.min.js"></script>
+    <script src="public/js/morris.js"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="public/js/sb-admin.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#health-group-c").hide();
+        })
+    </script>
+    @yield('js')
 </body>

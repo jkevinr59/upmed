@@ -5,7 +5,14 @@
 @section('content')
 <div class="row">
 	<div class="well custom-search-bar">
-					
+		<div class="col-xs-12 nav navbar-top-links">
+            <ul>
+            	<li><a href="#">Know</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Find</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul> 
+        </div>			
 	</div> 
 </div>
 <div class="row title">
@@ -24,4 +31,6 @@
 
 		</div>
 </div>
+@endsection
+@section('js')
 @endsection

@@ -37,6 +37,12 @@
         <div class="login-side-bar col-md-5">
             <div class="row" style="margin-top: 140px;">
                 <div class="col-md-8 col-md-offset-2">
+                            @if (session('status'))
+                            
+                                <div id="registered" class="alert alert-success">
+                                    <strong>{{ session('status') }}</strong> 
+                                </div>
+                            @endif
                     <h2 style="text-align: center;">Masuk ke UpMed</h3>
                     <p class="sub-header">Catat kesehatan Anda, dimulai dari sini</p>                
                 </div>
@@ -49,6 +55,7 @@
             </div>
             <div id="login-panel" class="row" style="margin-top: 20px;display: none;">
                 <div  class="col-md-9 col-md-offset-2">
+
                     <form role="form" method="post" action="home">
                         {{ csrf_field() }}
                         <label for="username" class="sr-only">Username</label>
@@ -78,5 +85,10 @@
     <script type="text/javascript">
         
     </script>
+    <script type="text/javascript">
+            $("#registered").fadeTo(2000, 500).slideUp(500, function(){
+                $(this).alert('close');
+            });
+        </script>
 </body>
 </html>

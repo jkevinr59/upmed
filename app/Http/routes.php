@@ -13,6 +13,10 @@
 
 Route::get('/', 'HomeController@index'
 );
+Route::get('/to_time', 'HomeController@to_time'
+);
+Route::post('/trial',['before'=>'csrf','uses'=> 'HomeController@register']
+);
 Route::post('/dashboard', 'HomeController@dummy_login');
 
 Route::post('/home', 'HomeController@login');

@@ -4,9 +4,9 @@
 @endsection
 @section('content')
 <div class="row" style="padding-top: 30px;">
-		<div class="col-xs-3">
+		<div class="col-xs-3 col-xs-offset-1">
 			<div class="row">
-				<div class="panel panel-success">
+				<div class="panel panel-success custom-panel-1 custom-panel-portrait">
     				<div class="panel-heading">
         				<div class="row">
             				<div class="col-xs-3">
@@ -27,9 +27,9 @@
 				</div>
 			</div>
 		</div>
-        <div class="col-xs-3 col-xs-offset-1">
+        <div class="col-xs-4" style="margin-left: 15px;">
             <div class="row">
-                <div class="panel panel-primary">
+                <div class="panel panel-default custom-panel-2 custom-panel-landscape">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
@@ -50,11 +50,11 @@
                 </div>    
             </div>
             <div class="row">
-                <div class="panel panel-info">
+                <div class="panel panel-info custom-panel-3 custom-panel-landscape">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
-                                <i class="fa fa-clipboard fa-5x"></i>
+                                <i class="fa fa-clipboard fa-4x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
                                     <b style="font-size: 18px;">Habis dari Lab?</b>
@@ -71,8 +71,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-3 col-xs-offset-1">
-            <div class="panel panel-primary">
+        <div class="col-xs-3">
+            <div class="panel panel-primary custom-panel-4 custom-panel-portrait">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-3">

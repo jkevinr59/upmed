@@ -23,11 +23,13 @@
 <div class="container-fluid" style="padding: 0px;">
     <div class="col-xs-3 layout-sidebar">
         <div class="row">
-            <div class="col-xs-6 layout-title-box"></div>
+            <div class="col-xs-6 layout-title-box">
+                <center><img src="public/images/logo2.png" width="84" height="14"></center>
+            </div>
         </div>
         <div class="row">
             <div class="col-xs-12 layout-image-box">
-                <center><img src="https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p66749.png" class="img-responsive" alt="Cinque Terre" width="120" height="120"> </center>
+                <center><img src="https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p66749.png" class="img-responsive" alt="Cinque Terre" width="100" height="100"> </center>
             </div>
         </div>
         <div class="row">
@@ -126,7 +128,7 @@
         </div>
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 layout-edit-button-box">
-                <center><a href="#" class="btn btn-default btn-round-lg btn-lg">Edit Profile&nbsp; &nbsp;<i class="fa fa-cog" aria-hidden="true"></i></a></center>
+                <center><a href="#" class="layout-edit-btn btn btn-default btn-round-lg btn-lg">Edit Profile&nbsp; &nbsp;<i class="fa fa-cog" aria-hidden="true"></i></a></center>
             </div>
         </div>
     </div>
@@ -134,15 +136,41 @@
         <div class="row layout-topbar">
                 <div class="col-xs-9 col-xs-offset-3">
                     <div class="row">
-                        <div class="col-xs-4 col-xs-offset-8 layout-tool-bar"></div>
+                        <div class="col-xs-4 col-xs-offset-8 layout-tool-bar nav navbar-top-links">
+                            <ul class="nav navbar-top-links navbar-right">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-language fa-fw"></i>
+                                        <i class="fa fa-caret-down"></i>
+                                    </a>   
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-newspaper fa-fw"></i>
+                                        <i class="fa fa-caret-down"></i>
+                                    </a>   
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-envelope fa-fw"></i>
+                                        <i class="fa fa-caret-down"></i>
+                                    </a>   
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown" href="logout">
+                                        <i class="fa fa-power-off fa-fw"></i>
+                                    </a>   
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-6 col-xs-offset-6 layout-menu-bar nav navbar-top-links">
-                           <ul>
-                                <li><a href="home">Dashboard</a></li>
-                                <li><a href="track">Track</a></li>
-                                <li><a href="service">Layanan</a></li>
-                                <li><a href="profile">Profile</a></li>
+                        <div class="col-xs-5 col-xs-offset-7 layout-menu-bar">
+                           <ul class="nav navbar-top-links navbar-right">
+                                <li><a href="home">UPLOAD</a></li>
+                                <li><a href="track">TRACK</a></li>
+                                <li><a href="service">LAYANAN</a></li>
+                                <li><a href="profile">PROFIL</a></li>
                             </ul> 
                         </div>
                     </div>
@@ -167,7 +195,7 @@
     <script src="public/js/sb-admin.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("#health-group-c").hide();
+            $("#health-group-b").hide();
         })
     </script>
     @yield('js')

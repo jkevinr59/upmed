@@ -1,5 +1,11 @@
+.txt-white{
+	color: #ffffff;
+}
+.txt-gray{
+	color: #ddd;
+}
 .layout-sidebar{
-	background-color: #fdfdfd;
+	background-color: #4f5253;
 	border-color: #dadada;
 	border-width: 0.1;
 	border-style:none solid none none;
@@ -11,6 +17,7 @@
 	z-index: 103;
 	padding: 0px;
 }
+
 .layout-topbar{
 	background-color: #ffffff;
 	border-color: #dadada;
@@ -33,10 +40,10 @@
 }
 .layout-image-box img{
 	border-radius: 50%;
-	border-color: #cccccc;
+	border-color: #dddddd;
 	border-width:0.2;
 	border-style:solid;
-	background-color: #fff;
+	background-color: #ddd;
 }
 .layout-profile-info{
 	margin-top: 20px;
@@ -59,6 +66,7 @@
 .layout-edit-btn{
 	border-radius: 20px;
 	background-color: #20C4C8;
+	border-style: none;
 	color: #ffffff;
 }
 .layout-menu-bar{
@@ -74,14 +82,14 @@
 	font-weight: bold;
 }
 .layout-menu-bar li a{
-	color: #aaaaaa;
+	color: #332c2b;
 }
 .layout-tool-bar{
 	height: 50px;
 	background-color: #ffffff;
 }
 .layout-tool-bar li a{
-	color: #aaaaaa;
+	color: #20c4cb;
 }
 .custom-description{
 	position: fixed;
@@ -130,19 +138,19 @@ border-style: none;
 	height: 130px;
 }
 .custom-panel-1>.panel-heading {
-	background-image: url("../images/background-1-panel-edit.jpg");
+	background-color: #69A2A8;
 	color: #fff;
 }
 .custom-panel-2>.panel-heading {
-	background-image: url("../images/background-2-panel.png");
-	color: #fff;
+	background-color: #BFE0EC;
+	color: #FFFDFD;
 }
 .custom-panel-3>.panel-heading {
-	background-image: url("../images/background-3-panel.png");
+	background-color: #777;
 	color: #fff;
 }
 .custom-panel-4>.panel-heading {
-	background-image: url("../images/background-4-panel.png");
+	background-color: #e49e95;
 	color: #fff;
 }
 .custom-panel-landscape > a > .panel-footer,
@@ -153,5 +161,5 @@ border-style: none;
 .custom-panel-2, 
 .custom-panel-3, 
 .custom-panel-4{
-	border-color: #dfdfdf;
+	border-style: none;
 }

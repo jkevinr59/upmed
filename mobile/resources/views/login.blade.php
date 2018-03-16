@@ -69,6 +69,7 @@
                         <input class="login-namefield" type="text" name="username" placeholder="Username">
                         <label for="password" class="sr-only">Password</label>
                         <input class="login-namefield" type="password" name="password" placeholder="Password">
+                        <label for="login-button" class="sr-only">Password</label>
                         <input type="Submit" class="login-color round-button-small" name="login" value="Login">
                     </form>
                     <button id="trial2-button" type="button" class="free-trial-color round-button">Daftar Baru</button>
@@ -80,7 +81,7 @@
                     <form role="form" method="post" action="trial">
                         {{ csrf_field() }}
                         <label for="username" class="sr-only">Username</label>
-                        <input class="login-namefield" type="text" name="username" placeholder="Username">
+                        <input class="trial-namefield" type="text" name="username" placeholder="Username">
                         <input type="Submit" class="login-color round-button-small" name="register" value="Daftar">
                     </form>
                     <button id="login2-button" type="button" class="login-color round-button">Login dengan Akun</button>    

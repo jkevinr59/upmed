@@ -50,7 +50,7 @@
                 </div>    
             </div>
             <div class="row">
-                <div class="panel panel-info custom-panel-3 custom-panel-landscape">
+                <div class="panel panel-default custom-panel-3 custom-panel-landscape">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
@@ -72,7 +72,7 @@
             </div>
         </div>
         <div class="col-xs-3">
-            <div class="panel panel-primary custom-panel-4 custom-panel-portrait">
+            <div class="panel panel-default custom-panel-4 custom-panel-portrait">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-3">

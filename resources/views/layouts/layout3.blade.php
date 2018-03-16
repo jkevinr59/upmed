@@ -36,18 +36,15 @@
             <div class="col-xs-8 col-xs-offset-2 layout-profile-info">
                 <div class="row">
                     <div class="col-xs-12">
-                        <center><b>Username:</b></center>
-                        <center>User1</center>
+                        <center class="txt-white"><b>User1</b></center>
                     </div>          
                 </div>
                 <div class="row">
-                    <div class="col-xs-6">
-                        <center><b>Gender:</b></center>
-                        <center>Male</center>
+                    <div class="col-xs-5 col-xs-offset-1">
+                        <center class="txt-white"><b>Male</b></center>
                     </div>
-                    <div class="col-xs-6">
-                        <center><b>Age:</b></center>
-                        <center>22</center>
+                    <div class="col-xs-5">
+                        <center class="txt-white"><b>29 y.o</b></center>
                     </div>    
                 </div>
             </div>
@@ -57,32 +54,27 @@
                 <button class="layout-health-button"><i class="fa fa-angle-left"></i></button>
             </div>
             <div class="col-xs-8 layout-personal-health">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <center><h4>Personal Health</h4></center>
-                    </div>
-                </div>
                 <!-- Group B-->
                 <div id="health-group-b" class="row layout-personal-group">
                     <div class="col-xs-12">
                         <div class="row">
                             <div class="col-xs-6" style="height: 42px">
-                                <center><b>Blood Pressure</b></center>
+                                <center class="txt-white"><b>Blood Pressure</b></center>
                                 
                             </div>
                             <div class="col-xs-6" style="height: 42px;line-height: 40px;">
-                                <center style=""><b>Cholesterol</b></center>
+                                <center class="txt-white"><b>Cholesterol</b></center>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="row">
                             <div class="col-xs-6">
-                                <center>112</center>
+                                <center class="txt-white">112</center>
                                 
                             </div>
                             <div class="col-xs-6">
-                                <center>155</center>
+                                <center class="txt-white">155</center>
                             </div>
                         </div>
                     </div>
@@ -93,29 +85,31 @@
                     <div class="col-xs-12">
                         <div class="row">
                             <div class="col-xs-12">
-                                <b>Alergi:</b>
-                                    <p>
+                                <center><b class="txt-white">Alergi:</b>
+                                    <p class="txt-gray">
                                        + Udang<br>
                                        + Analgesik<br>
                                        + Debu<br>
-                                    </p>  
+                                    </p></center>  
                             </div>
                         </div>
                         <div class="row">
+                            <center>
                             <div class="col-xs-12">
-                                <b>Riwayat Opname</b>
-                                <p>
+                                <b class="txt-white">Riwayat Opname</b>
+                                <p class="txt-gray">
                                     + 14 November 18 (3 hari)
                                     + 11 Maret 18 (2 hari)
                                 </p>
                             </div>
+                            </center>
                         </div>
                         <div class="row">
                             <div class="col-xs-6">
-                                <span>Asma <i class="fas fa-check"></i></span>
+                                <span class="txt-white">Asma <i class="fas fa-check"></i></span>
                             </div>
                             <div class="col-xs-6">
-                                <span>Diabetes <i class="fas fa-times"></i></span>
+                                <span class="txt-white">Diabetes <i class="fas fa-times"></i></span>
                             </div>
                         </div>
                     </div>
@@ -128,7 +122,7 @@
         </div>
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 layout-edit-button-box">
-                <center><a href="#" class="layout-edit-btn btn btn-default btn-round-lg btn-lg">Edit Profile&nbsp; &nbsp;<i class="fa fa-cog" aria-hidden="true"></i></a></center>
+                <center><a href="#" class="layout-edit-btn btn btn-default btn-round-lg btn-lg">EDIT <i class="fa fa-cog" aria-hidden="true"></i></a></center>
             </div>
         </div>
     </div>
@@ -140,8 +134,7 @@
                             <ul class="nav navbar-top-links navbar-right">
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <i class="fa fa-language fa-fw"></i>
-                                        <i class="fa fa-caret-down"></i>
+                                        ID <i class="fa fa-caret-down"></i>
                                     </a>   
                                 </li>
                                 <li class="dropdown">

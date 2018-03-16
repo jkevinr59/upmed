@@ -1,0 +1,92 @@
+@font-face{
+	font-family: 'helvetica-light';
+	src: url('../fonts/helvetica-light.ttf');
+}
+@font-face{
+	font-family: 'raleway';
+	src: url('../fonts/raleway.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'blowbrush';
+	src: url('../fonts/blowbrush.ttf') format('truetype');
+}
+.login-bg{
+	background-color: #F0F0F0;
+}
+.login-side-bar{
+	background-color: #FFFFFF;
+	height: 600px;
+	border-color: #000000;
+}
+.ilustration h2{
+	font-family: 'raleway';
+	font-weight: bold;
+}
+.ilustration p{
+	margin-top: 40px;
+	color: #909090;
+}
+.free-trial-color{
+	border-color: #57BCD9;
+	border-style: solid;	
+	background-color: #57BCD9;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+.login-color{
+	border-color: #5780D9;
+	border-style: solid;	
+	background-color: #5080FF;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+.round-button{
+	margin-top: 30px;
+	height: 40px;
+	width: 240px;
+	border-radius: 20px;
+}
+.round-button-small{
+	margin-top: 10px;
+	height: 40px;
+	width: 80px;
+	border-radius: 20px;
+}
+.sub-header{
+	color: #808080;
+	text-align: center;
+	font-size: 14px;
+}
+.language-button{
+	border:none;
+	background:inherit;
+	font-size: 20px;
+}
+.menu-bar-icon div{
+	width: 18px;
+    height: 2px;
+    background-color: black;
+    margin: 3px 5px;
+}
+.login-namefield{
+	margin-top: 10px;
+	margin-left:6px;
+	margin-right:6px;
+	height: 40px;
+	width: 140px;
+	border-radius: 20px;
+	padding:5px;
+	color: #808080;
+	display: inline-block;
+	background: none;
+	border-style: solid;
+	border-color: #555555;
+	font-family: "helvetica-light";
+}
+input:-webkit-autofill{
+	-webkit-box-shadow: 0 0 0 30px white inset;
+	 -webkit-text-fill-color: #808080 !important;
+}
+#trial2-button{
+	margin-left:50px;
+}

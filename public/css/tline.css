@@ -1,0 +1,41 @@
+.tline::after{
+	content: '';
+  	position: absolute;
+  	width: 6px;
+  	background-color: #555;
+  	top: 0;
+  	bottom: 0;
+  	left: 50%;
+  	margin-left: -3px;
+}
+.tline-badge{
+	width: 100%;
+	height: 50px;
+}
+.tline-badge::after{
+	content: '';
+  	position: absolute;
+  	background-color: #ff3300;
+  	border-style: solid;
+  	top: 0;
+  	bottom: 0;
+  	left: 50%;
+  	width: 50px;
+  	height: 50px;
+  	margin-left:-25px;
+  	margin-top: -1px; 
+  	border-radius: 50%;
+  	border-color: #cccccc;
+  	z-index: 51;
+}
+.tline-badge-text{
+	position: absolute;
+	left: 50%;
+	color: #ffffff;
+	font-size: 20px;
+	margin-left: -25px;
+	margin-top: 10px;
+	width: 50px;
+	text-align: center;
+	z-index: 52;
+}

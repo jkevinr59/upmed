@@ -76,12 +76,13 @@ class HomeController extends Controller {
 			return Redirect::to('/')->with('status','username yang anda isi sudah terpakai, mohon gunakan username lain');
 		}
 		else{
-			User::create([
+			$user=User::create([
 				'name'=>$request->input('username'),
 				'password'=>bcrypt('1234'),
 				'username'=>$username,
 			]);
-			return Redirect::to('/')->with('status', 'anda berhasil mendaftar, anda terdaftar dengan username: '.$username.', dan password: 1234');
+			Auth::loginUsingId($user->id);
+			return Redirect::to('/home')->with('status', 'anda berhasil mendaftar, anda terdaftar dengan username: '.$username.', dan password: 1234');
 		}
 		
 

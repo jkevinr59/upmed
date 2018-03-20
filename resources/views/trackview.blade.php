@@ -2,66 +2,42 @@
 @section('css')
 <link href="public/css/home3.css" rel="stylesheet">
 <link href="public/css/home2.css" rel="stylesheet">
+<link href="public/css/tline.css" rel="stylesheet">
 @endsection
 @section('content')
 
 <div class="row" style="margin-top: 80px;">
 	<div class="well custom-description">
 		<div class="row">
-			<div class="col-xs-7">
+			<div class="col-xs-7 txt-white">
 				<p>Kunjungan ke Dokter</p>
 				<b>Berkunjung ke Dokter Bambang</b>
 			</div>
 			<div class="col-xs-4 col-xs-offset-1">
 				<div class="custom-desc-date">
-				<h4 class="text-center">01<br>FEB</h4>
+				<h4 class="text-center txt-white">01<br>FEB</h4>
 				</div>			
 			</div>
 		</div>
+		<hr style="margin-top: 10px; margin-bottom:5px;">
 		<div class="row">
-			<ul class="nav nav-tabs">
-  				<li class="active"><a href="#">Detail</a></li>
-  				<li><a href="#">Recommend</a></li>
-  				<li><a href="#">Share</a></li>
-			</ul>
+			<div class="col-xs-12">
+				<ul class="slash-list txt-white">
+  						<li class="txt-white"><a class="txt-white" href="#">Detail</a></li> /
+  						<li class="txt-white"><a class="txt-white" href="#">Recommend</a></li> /
+  						<li class="txt-white"><a class="txt-white" href="#">Share</a></li>
+				</ul>
+			</div>	
 		</div>
-	<!--
-		<h4>1 February 2018</h4>
-		<b>Title</b>
-		<p id="title-detail">Berkunjung ke Dokter Bambang</p>
-		<b>Deskripsi</b>
-		<p id="description-detail"> Ditemukan alergi makanan yang mengandung susu</p>
-		<button type="button" class="btn btn-info btn-sm">Edit</button>-->					
+		<button class="desc-edit-button">E D I T</button>		
 	</div> 
-	<div class="well custom-track-filter">
-		<div class="col-xs-3 col-xs-offset-1">
-			<b class="pull-left">Overview</b>
-			<br>
-			<span class="pull-left">Analisa track kesehatan Anda</span>
-		</div>
-		<div class="col-xs-3 col-xs-offset-1">
-			<div class="form-group">
-				<label class="sr-only">Keluhan</label>
-				<select name="keluhan" class="form-control">
-					<option>Keluhan/Momen</option>
-				</select>
-			</div>
-		</div>
-		<div class="col-xs-3">
-			<div class="form-group">
-				<label class="sr-only" for="Tanggal">Tanggal</label>
-				<input class="form-control" type="date" name="tanggal">
-			</div>
-		</div>
-		<div class="col-xs-1">
-			<button id="go-btn" class="round-button">
-				<i class="fa fa-paper-plane fa-fw" style="color: #FFFFFF;"></i>
-			</button>
-		</div>
-	</div>
+    <div class="col-xs-4 col-xs-offset-1">
+        <h4 class="calibri">T R A C K</h4>
+        <p class="txt-gray2 calibri">Analisa rekam kesehatan Anda</p>
+    </div>
 </div>
 <div class="row" style="margin-top: 40px;">
-	<div class="col-xs-8">
+	<div class="col-xs-7 col-xs-offset-1">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<b> Berat Badan/January - February</b>
@@ -73,14 +49,41 @@
 	</div>
 </div>
 <div class="row" style="margin-top: 40px;">
-	<div class="col-xs-8">
+	<div class="col-xs-7 col-xs-offset-1">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<b><?php echo date('F',strtotime('-1 month')).' - '.date('F Y');?></b>
 			</div>
 			<div class="panel-body">
-				<div class="col-xs-10">
-					<ul class="timeline">
+				<div class="col-xs-10 tline" style="height: 100%;">
+					<div class="row tline-badge">
+						<b class="tline-badge-text">1</b>
+					</div>
+					<div class="tline-date"></div>
+					<button class="tline-content"></button>
+				</div>
+				<!--			
+				<div class="col-xs-5">
+					<div class="well">
+						<h4>1 February 2018</h4>
+						<b>Title</b>
+						<p id="title-detail">Berkunjung ke Dokter Bambang</p>
+						<b>Deskripsi</b>
+						<p id="description-detail"> Ditemukan alergi makanan yang mengandung susu</p>
+						<button type="button" class="btn btn-info btn-sm">Edit</button>
+						
+					</div>
+				</div>
+				-->
+			</div>
+			<div class="panel-footer">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+<ul class="timeline">
                                 <li style="height: 60px;">
                                 	<div class="timeline-badge primary">
                                    	25
@@ -136,26 +139,5 @@
                                         </div>
                                     </div>
                                 </li>
-                    </ul>
-				</div>
-				<!--			
-				<div class="col-xs-5">
-					<div class="well">
-						<h4>1 February 2018</h4>
-						<b>Title</b>
-						<p id="title-detail">Berkunjung ke Dokter Bambang</p>
-						<b>Deskripsi</b>
-						<p id="description-detail"> Ditemukan alergi makanan yang mengandung susu</p>
-						<button type="button" class="btn btn-info btn-sm">Edit</button>
-						
-					</div>
-				</div>
-				-->
-			</div>
-			<div class="panel-footer">
-				
-			</div>
-		</div>
-	</div>
-</div>
+                    </ul>-->
 @endsection

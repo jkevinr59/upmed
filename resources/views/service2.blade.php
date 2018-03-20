@@ -15,20 +15,87 @@
         </div>			
 	</div> 
 </div>
-<div class="row title">
-		<div class="col-xs-8">
-			<h3 id="title">WEBINAR</h3>
-			<h4 id="sub-title">Makin Tahu,Makin Sehat</h4>
-		</div>
+<div class="row">
+    <div class="col-xs-4 col-xs-offset-2">
+        <h4 class="calibri">S E R V I C E</h4>
+        <p class="txt-gray2 calibri">Berbagai Macam Layanan Untuk Kesehatanmu</p>
+    </div>
 </div>
-<div class="row" style="height: 250px;background-color: #44AA44">
-		<div class="col-xs-2" style="background-color: #ffffff; margin:15px;height: 220px;">
-				<button class="service-panel" style="background-image: url('public/images/wordpress.png');" ></button>
-				<p style="margin-top:10px;">Upmed Now!!</p>
-				<button class="pull-right btn btn-primary" style="font-size: 12px;"> Selengkapnya</button>
+<div class="row" style="padding-top: 30px;height: 85%;">
+		<div class="col-xs-2 col-xs-offset-2" style="width:200px;">
+			<div class="row">
+				<div class="panel panel-success custom-panel-1 custom-panel-portrait">
+    				<div class="panel-heading">
+        				<div class="row">
+            				<div class="col-xs-12">
+                				<center><i class="fa fa-medkit fa-6x"></i></center>
+                			</div>
+                			<div class="col-xs-12">
+                     				<center>
+                                       <b style="font-size: 18px;">Merasakan Sakit?</b>
+                                        <div>Kami Bantu Anda mencari penyebabnya</div> 
+                                    </center>
+                 			</div>
+        	 			</div>
+    				</div>
+    				<a href="#">
+    					<div class="panel-footer">	
+        					<span class="pull-right">Mulai Diagnosa <i class="fa fa-arrow-circle-right"></i></span>
+        					<div class="clearfix"></div>
+    					</div>
+    				</a>
+				</div>
+			</div>
 		</div>
-		<div class="col-xs-2" style="background-color: #ffffff; margin:15px;height: 220px;">
-
+		<div class="col-xs-2" style="width:200px; margin:0 24px;">
+			<div class="row">
+				<div class="panel panel-success custom-panel-1 custom-panel-portrait">
+    				<div class="panel-heading">
+        				<div class="row">
+            				<div class="col-xs-12">
+                				<center><i class="fa fa-medkit fa-6x"></i></center>
+                			</div>
+                			<div class="col-xs-12">
+                     				<center>
+                                       <b style="font-size: 18px;">Merasakan Sakit?</b>
+                                        <div>Kami Bantu Anda mencari penyebabnya</div> 
+                                    </center>
+                 			</div>
+        	 			</div>
+    				</div>
+    				<a href="#">
+    					<div class="panel-footer">	
+        					<span class="pull-right">Mulai Diagnosa <i class="fa fa-arrow-circle-right"></i></span>
+        					<div class="clearfix"></div>
+    					</div>
+    				</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-2" style="width:200px;">
+			<div class="row">
+				<div class="panel panel-success custom-panel-1 custom-panel-portrait">
+    				<div class="panel-heading">
+        				<div class="row">
+            				<div class="col-xs-12">
+                				<center><i class="fa fa-medkit fa-6x"></i></center>
+                			</div>
+                			<div class="col-xs-12">
+                     				<center>
+                                       <b style="font-size: 18px;">Merasakan Sakit?</b>
+                                        <div>Kami Bantu Anda mencari penyebabnya</div> 
+                                    </center>
+                 			</div>
+        	 			</div>
+    				</div>
+    				<a href="#">
+    					<div class="panel-footer">	
+        					<span class="pull-right">Mulai Diagnosa <i class="fa fa-arrow-circle-right"></i></span>
+        					<div class="clearfix"></div>
+    					</div>
+    				</a>
+				</div>
+			</div>
 		</div>
 </div>
 @endsection

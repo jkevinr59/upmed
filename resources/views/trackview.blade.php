@@ -6,7 +6,7 @@
 @endsection
 @section('content')
 
-<div class="row" style="margin-top: 80px;">
+<div class="row" style="margin-top: 40px;">
 	<div class="well custom-description">
 		<div class="row">
 			<div class="col-xs-7 txt-white">
@@ -55,12 +55,25 @@
 				<b><?php echo date('F',strtotime('-1 month')).' - '.date('F Y');?></b>
 			</div>
 			<div class="panel-body">
-				<div class="col-xs-10 tline" style="height: 100%;">
+				<div class="col-xs-12 tline" style="padding-bottom: 30px;">
 					<div class="row tline-badge">
 						<b class="tline-badge-text">1</b>
 					</div>
-					<div class="tline-date"></div>
-					<button class="tline-content"></button>
+					<div class="tline-content">
+						<div class="tline-date">07:10 PM</div>
+						<button class="tline-head">Demam</button>
+					</div>
+					<div class="tline-content">
+						<div class="tline-date">08:10 PM</div>
+						<button class="tline-head">Periksa Gula Darah</button>
+					</div>	
+					<div class="tline-content">
+						<div class="tline-date">12:10 PM</div>
+						<button class="tline-head">Kunjungan Ke Dokter</button>
+					</div>
+					<div class="row tline-badge">
+						<b class="tline-badge-text">3</b>
+					</div>			
 				</div>
 				<!--			
 				<div class="col-xs-5">

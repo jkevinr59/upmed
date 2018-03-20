@@ -1,12 +1,12 @@
 .tline::after{
 	content: '';
   	position: absolute;
-  	width: 6px;
+  	width: 2px;
   	background-color: #555;
   	top: 0;
   	bottom: 0;
   	left: 50%;
-  	margin-left: -3px;
+  	margin-left: -1px;
 }
 .tline-badge{
 	width: 100%;
@@ -17,8 +17,6 @@
   	position: absolute;
   	background-color: #ff3300;
   	border-style: solid;
-  	top: 0;
-  	bottom: 0;
   	left: 50%;
   	width: 50px;
   	height: 50px;
@@ -38,4 +36,51 @@
 	width: 50px;
 	text-align: center;
 	z-index: 52;
+}
+.tline-content{
+	margin-top:30px;
+	margin-bottom: 30px;
+	height: 30px;
+}
+.tline-content::after{
+	content: '';
+  	position: absolute;
+  	background-color: #dddddd;
+  	border-style: solid;
+  	left: 50%;
+  	margin-top:8px;
+  	width: 10px;
+  	height: 10px;
+  	margin-left:-5px; 
+  	border-radius: 50%;
+  	border-color: #cccccc;
+  	z-index: 51;
+}
+.tline-date{
+	width: 20%;
+	left: 20%;
+	margin-top: 4px;
+	position: absolute;
+	display: inline-block;
+	text-align: right;
+}
+.tline-head{
+	position: absolute;
+	display: inline-block;
+	width: 35%;
+	left: 60%;
+	background-color: #ffffff;
+	border-style: solid;
+	border-color:#999999;
+	border-width: 0.2;
+}
+.tline-head:hover{
+	background-color: #20c4cb;
+	border-color:#ffffff;
+	color: #ffffff;
+}
+.head-active{
+	background-color: #20c4cb;
+	border-color:#ffffff;
+	color: #ffffff;
 }

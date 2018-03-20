@@ -66,7 +66,7 @@ class HomeController extends Controller {
 	}
 	public function Register(Request $request) {
 
-		$username = $request->input('username')."_".date("Ymd");
+		$username = $request->input('username');
 		//return Redirect::to('/')->with('status',$username);
 		//$ada=DB::table('users')->where('username','=',$request->input('username'))->get();
 		$ada=DB::table('users')->where('username','=',$username)->get();

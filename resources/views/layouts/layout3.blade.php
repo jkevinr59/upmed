@@ -184,10 +184,21 @@
                   
         </div>
         <div class="row" style="padding-top: 130px;">
+             @if (session('status'))
+                            
+                                <div id="registered" class="alert alert-success">
+                                    <strong>{{ session('status') }}</strong> 
+                                </div>
+                            @endif
             @yield('content')
         </div>        
     </div>
 </div>
+    <script type="text/javascript">
+            $("#registered").fadeTo(2000, 500).slideUp(500, function(){
+                $(this).alert('close');
+            });
+        </script>
     <script src="public/js/jquery.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/jquery.metisMenu.js"></script>

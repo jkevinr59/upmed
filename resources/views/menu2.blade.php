@@ -50,7 +50,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="input">
                         <div class="panel-footer">  
                             <span class="pull-right">Mulai Catat <i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>

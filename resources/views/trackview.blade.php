@@ -59,7 +59,7 @@
     </div>
 </div>
 <div class="row" style="margin-top: 20px;">
-	<div class="col-xs-4" style="margin-left:10px; width: 40%;">
+	<div class="col-xs-4" style="margin-left:25px; width: 40%;">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<b> Berat Badan/January - February</b>

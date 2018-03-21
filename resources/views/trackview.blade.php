@@ -7,6 +7,28 @@
 @section('content')
 
 <div class="row" style="margin-top: 40px;">
+	<div class="well custom-track-filter">
+				
+		<div class="col-xs-5">
+					<div class="form-group">
+						<label class="sr-only">Keluhan</label>
+						<select name="keluhan" class="form-control">
+							<option>Keluhan/Momen</option>
+						</select>
+					</div>
+		</div>
+		<div class="col-xs-5">
+			<div class="form-group">
+				<label class="sr-only" for="Tanggal">Tanggal</label>
+				<input class="form-control" type="date" name="tanggal">
+			</div>
+		</div>
+		<div class="col-xs-2">
+			<button id="go-btn" class="round-button">
+					<i class="fa fa-paper-plane fa-fw" style="color: #FFFFFF;"></i>
+			</button>
+		</div>
+	</div>
 	<div class="well custom-description">
 		<div class="row">
 			<div class="col-xs-7 txt-white">
@@ -36,8 +58,8 @@
         <p class="txt-gray2 calibri">Analisa rekam kesehatan Anda</p>
     </div>
 </div>
-<div class="row" style="margin-top: 40px;">
-	<div class="col-xs-7 col-xs-offset-1">
+<div class="row" style="margin-top: 20px;">
+	<div class="col-xs-4" style="margin-left:10px; width: 40%;">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<b> Berat Badan/January - February</b>
@@ -47,9 +69,8 @@
 			</div>
 		</div>
 	</div>
-</div>
-<div class="row" style="margin-top: 40px;">
-	<div class="col-xs-7 col-xs-offset-1">
+
+	<div class="col-xs-4">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<b><?php echo date('F',strtotime('-1 month')).' - '.date('F Y');?></b>

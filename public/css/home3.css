@@ -126,19 +126,23 @@ hr
 .custom-description{
 	position: fixed;
 	top: 23%;
-	left: 75%;
+	left: 80%;
 	height: 75%;
-	width: 300px;
+	width: 20%;
 	z-index: 101;
 	background-color: #555555;
 }
 .custom-track-filter{
+	background-color: transparent;
+	box-shadow: none;
+	border-style: none;
+	padding-top: 5px;
 	position: fixed;
-	top: 23%;
-	left: 25%;
-	width: 72%;
+	top: 1%;
+	left: 40%;
+	width: 45%;
 	height: 80px;
-	z-index: 101;
+	z-index: 103;
 }
 .custom-desc-date{
 	border-style: solid;
@@ -147,8 +151,8 @@ hr
 .desc-edit-button{
 	position: absolute;
 	top: 90%;
-	left: 20%;
-	width: 60%;
+	left: 30%;
+	width: 40%;
 	height: 6%;
 	border-style: none;
 	border-radius: 20px;

@@ -194,11 +194,6 @@
         </div>        
     </div>
 </div>
-    <script type="text/javascript">
-            $("#registered").fadeTo(2000, 500).slideUp(500, function(){
-                $(this).alert('close');
-            });
-        </script>
     <script src="public/js/jquery.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/jquery.metisMenu.js"></script>

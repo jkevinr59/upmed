@@ -48,7 +48,7 @@
   	background-color: #dddddd;
   	border-style: solid;
   	left: 50%;
-  	margin-top:8px;
+  	margin-top:10px;
   	width: 10px;
   	height: 10px;
   	margin-left:-5px; 
@@ -66,6 +66,7 @@
 }
 .tline-head{
 	position: absolute;
+	padding: 4px 6px;
 	display: inline-block;
 	width: 35%;
 	left: 60%;
@@ -73,6 +74,7 @@
 	border-style: solid;
 	border-color:#999999;
 	border-width: 0.2;
+	font-size: 12px;
 }
 .tline-head:hover{
 	background-color: #20c4cb;

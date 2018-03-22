@@ -6,7 +6,7 @@
 @section('content')
     <div class="row" style="padding-top: 80px;">
         <div class="col-md-9 col-md-offset-1">
-            <form  class="custom-input-form form-horizontal" role="form" action="inputdata" method="POST" onsubmit="return isValid()">
+            <form  class="custom-input-form form-horizontal" role="form" action="input" method="POST" onsubmit="return isValid()">
                 {{csrf_field()}}
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
@@ -90,7 +90,7 @@
         }
         else if(subjekType[selectedId]==1)
         {
-            $('#txtarea-label').text("Amount:");
+            $('#txtarea-label').text("Detail Jumlah:");
             $('#txtarea').attr("placeholder","Amount");
         }
     

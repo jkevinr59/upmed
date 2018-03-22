@@ -36,7 +36,7 @@
             <div class="col-xs-8 col-xs-offset-2 layout-profile-info">
                 <div class="row">
                     <div class="col-xs-12">
-                        <center class="txt-white"><b>User1</b></center>
+                        <center class="txt-white"><b><?php echo $user['name']?></b></center>
                     </div>          
                 </div>
                 <div class="row" style="margin-top: 10px;">

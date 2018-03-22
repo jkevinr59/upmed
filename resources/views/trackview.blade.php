@@ -73,28 +73,39 @@
 	<div class="col-xs-4">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<b><?php echo date('F',strtotime('-1 month')).' - '.date('F Y');?></b>
+				<b><?php echo $timelineTitle;?></b>
 			</div>
 			<div class="panel-body">
 				<div class="col-xs-12 tline" style="padding-bottom: 30px;">
 					<div class="row tline-badge">
-						<b class="tline-badge-text">1</b>
+						<b class="tline-badge-text"><?php echo intval($lastMonth)?></b>
 					</div>
 					<div class="tline-content">
-						<div class="tline-date">07:10 PM</div>
+						<div class="tline-date">15 Januari</div>
 						<button class="tline-head">Demam</button>
 					</div>
 					<div class="tline-content">
-						<div class="tline-date">08:10 PM</div>
+						<div class="tline-date">18 Januari</div>
 						<button class="tline-head">Periksa Gula Darah</button>
 					</div>	
 					<div class="tline-content">
-						<div class="tline-date">12:10 PM</div>
+						<div class="tline-date">20 Januari</div>
 						<button class="tline-head">Kunjungan Ke Dokter</button>
 					</div>
 					<div class="row tline-badge">
-						<b class="tline-badge-text">3</b>
-					</div>			
+						<b class="tline-badge-text"><?php echo intval($currentMonth)?></b>
+					</div>
+					<?php
+					foreach($record as $row){
+						?>
+					<div class="tline-content">
+						<div class="tline-date"><?php echo date('d F',strtotime($row['Datetime']));?></div>
+						<button class="tline-head"><?php echo $row['Title'];?></button>
+					</div>
+					<?php }?>
+					<div class="row tline-badge">
+						<b class="tline-badge-text"><?php echo intval($nextMonth)?></b>
+					</div>				
 				</div>
 				<!--			
 				<div class="col-xs-5">

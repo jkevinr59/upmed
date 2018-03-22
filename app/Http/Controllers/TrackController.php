@@ -10,6 +10,7 @@ use Validator;
 use Illuminate\Support\Facades\Auth;
 use App\Subjek;
 use App\Rekor_medis;
+use App\Relasi_Subjek;
 
 class TrackController extends Controller
 {
@@ -36,8 +37,19 @@ class TrackController extends Controller
 		return view("track1", ['query' => $query]);
 		}*/
 	}
-	public function new_track(){
-		$data['user'] = Auth::user();
+	public function initialTrack(){
+		$user = Auth::user();
+		$data['user'] = $user;
+		$upperDate = strtotime('next month');
+		$lowerDate = strtotime('last month');
+		$dateRange2 = date('Y-m-d',$upperDate);
+		$dateRange = date('Y-m-d',$lowerDate);
+		$record = Rekor_medis::where('user',$user['id'])->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
+		$data['record'] = $record;
+		$data['lastMonth'] = date('m',$lowerDate);
+		$data['currentMonth'] = date('m');
+		$data['nextMonth'] = date('m',$upperDate);
+		$data['timelineTitle'] = date('d F Y',$lowerDate).' - '. date('d F Y',$upperDate);
 		return view("trackview", $data);
 	}
 }

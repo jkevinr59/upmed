@@ -1,6 +1,7 @@
-@extends('layouts.layout2')
+@extends('layouts.layout3')
 @section('css')
 <link href="public/css/home2.css" rel="stylesheet">
+<link href="public/css/home3.css" rel="stylesheet">
 @endsection
 @section('content')
 <div class="row" style="margin-top: 100px;">

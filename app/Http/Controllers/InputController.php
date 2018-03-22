@@ -41,7 +41,7 @@ class InputController extends Controller
 		$data['user'] = Auth::user();
 		return view("input", $data);
 	}
-	public function add_rekor_medis2(Request $req) {
+	public function inputData(Request $req) {
 	  if($req->isMethod('post'))
         {
             $data = Input::all();
@@ -79,8 +79,10 @@ class InputController extends Controller
 				$table->Title=$title;
 
 				$table->save();
-                $query=Subjek::all();
-	        	return view("home", ['query' => $query]);
+				$data['query']=Subjek::all();
+                $data['selectedSubjectID'] = 0;
+				$data['user'] = Auth::user();
+	        	return view("input", $data);
 			}
 		}
 	}

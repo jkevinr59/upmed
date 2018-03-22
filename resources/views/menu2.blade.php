@@ -27,7 +27,7 @@
                  			</div>
         	 			</div>
     				</div>
-    				<a href="#">
+    				<a href="sakitapa">
     					<div class="panel-footer">	
         					<span class="pull-right">Mulai Diagnosa <i class="fa fa-arrow-circle-right"></i></span>
         					<div class="clearfix"></div>
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="input">
+                    <a href="trauma">
                         <div class="panel-footer">  
                             <span class="pull-right">Mulai Catat <i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="input">
+                    <a href="lab">
                         <div class="panel-footer">  
                             <span class="pull-right">Mulai Catat <i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
@@ -96,7 +96,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="dokter">
                         <div class="panel-footer">  
                             <span class="pull-right">Mulai Catat <i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>

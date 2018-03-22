@@ -67,6 +67,7 @@ class HomeController extends Controller {
 	public function Register(Request $request) {
 
 		$username = $request->input('username');
+		$email = $request->input('email');
 		//return Redirect::to('/')->with('status',$username);
 		//$ada=DB::table('users')->where('username','=',$request->input('username'))->get();
 		$ada=DB::table('users')->where('username','=',$username)->get();
@@ -80,6 +81,7 @@ class HomeController extends Controller {
 				'name'=>$request->input('username'),
 				'password'=>bcrypt('1234'),
 				'username'=>$username,
+				'email'=>$email,
 			]);
 			Auth::loginUsingId($user->id);
 			return Redirect::to('/home')->with('status', 'anda berhasil mendaftar, anda terdaftar dengan username: '.$username.', dan password: 1234');

@@ -21,7 +21,10 @@ Route::post('/dashboard', 'HomeController@dummy_login');
 
 Route::post('/home', 'HomeController@login');
 Route::get('/home', 'HomeController@home');
-Route::get('/input','InputController@show_view');
+Route::get('/input','InputController@showView');
+Route::get('/lab','InputController@showViewLab');
+Route::get('/trauma','InputController@showViewTrauma');
+Route::get('/dokter','InputController@showViewDokter');
 Route::post('/inputdata','InputController@add_rekor_medis2');
 Route::get('/track', 'TrackController@new_track');
 Route::get('/service','ServiceController@show_view');

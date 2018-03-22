@@ -1,10 +1,11 @@
-@extends('layouts.layout2')
+@extends('layouts.layout3')
 @section('css')
 <link href="public/css/home2.css" rel="stylesheet">
+<link href="public/css/home3.css" rel="stylesheet">
 @endsection
 @section('content')
     <div class="row" style="padding-top: 80px;">
-        <div class="col-md-9 col-md-offset-2">
+        <div class="col-md-9 col-md-offset-1">
             <form  class="custom-input-form form-horizontal" role="form" action="inputdata" method="POST" onsubmit="return isValid()">
                 {{csrf_field()}}
                 <div class="row">
@@ -12,15 +13,15 @@
                         <div class="form-group">
                             <label class="control-label col-xs-1" for="date" style="text-align: left;padding-left: 0px;">Tanggal:</label>
                             <div class="col-xs-5">
-                                <input id="datefield" class="form-control" type="date" name="inputdate">
+                                <input id="datefield" class="form-control" type="date" name="inputdate" value=<?php echo date('"Y-m-d"')?>>
                             </div>   
                         </div>
                         <div class="form-group">
                             <label class="control-label">Subjek:</label>
                             <select name="Subject" class="form-control" onchange='changetype();' id="subjekmenu" >
-                            <option>Select Medical Subject...</option>
+                            <option <?php if($selectedSubjectID == 0) echo "Selected"?>>Select Medical Subject...</option>
                             <?php foreach($query as $row){?>
-                                <option value=<?php echo $row['id'] ?>>
+                                <option value=<?php echo $row['id']; ?> <?php if($row['id'] == $selectedSubjectID) echo 'selected';?>>
                                 <?php echo $row['Name']?>
                                 </option>
                             <?php } ?>

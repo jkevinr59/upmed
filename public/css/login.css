@@ -87,6 +87,6 @@ input:-webkit-autofill{
 	-webkit-box-shadow: 0 0 0 30px white inset;
 	 -webkit-text-fill-color: #808080 !important;
 }
-#trial2-button{
+#trial2-button,#login2-button{
 	margin-left:50px;
 }

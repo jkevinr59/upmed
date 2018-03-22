@@ -68,12 +68,13 @@
                 </div>
             </div>
             <div id="trial-panel" class="row" style="margin-top: 20px;display: none;">
-                <div  class="col-md-6 col-md-offset-3">
-                    <p style="text-align: center;">Silahkan masukkan username di sini</p>
+                <div  class="col-md-9 col-md-offset-2">
                     <form role="form" method="post" action="trial">
                         {{ csrf_field() }}
                         <label for="username" class="sr-only">Username</label>
                         <input class="login-namefield" type="text" name="username" placeholder="Username">
+                        <label for="email" class="sr-only">Username</label>
+                        <input class="login-namefield" type="text" name="email" placeholder="Email">
                         <input type="Submit" class="login-color round-button-small" name="register" value="Daftar">
                     </form>
                     <button id="login2-button" type="button" class="login-color round-button">Login dengan Akun</button>    

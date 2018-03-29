@@ -23,6 +23,7 @@ class HomeController extends Controller {
 		$user = $authreq->input('username');
 		$password = $authreq->input('password');
 		$query = User::where('username', $user)->first();
+		//dd($query);
 		$hashedpassword = $query->password;
 		$userid= $query->id;
 		if (Hash::check($password, $hashedpassword)) {

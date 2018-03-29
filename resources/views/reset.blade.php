@@ -6,7 +6,10 @@
 @section('content')
 <div class="row" style="margin-top: 100px;">
 	<div class="col-xs-8 col-xs-offset-1">
-		<form role="form" class="form-horizontal">
+		 
+
+		<form role="form" class="form-horizontal" action="{{url('/resetpassword')}}" method="POST">
+			 {{ csrf_field() }}
 			<div class="form-group">
 				<label class="control-label col-xs-4">Old Password:</label>
 				<div class="col-xs-8">
@@ -31,6 +34,17 @@
 				</div>	
 			</div>
 		</form>
+		@if (session('status'))
+                            
+             <div id="pwd" class="alert alert-success">
+               <strong>{{ session('status') }}</strong> 
+            </div>
+         @endif
+         <script type="text/javascript">
+            $("#pwd").fadeTo(2000, 500).slideUp(500, function(){
+                $(this).alert('close');
+            });
+        </script>
 	</div>
 </div>
 @endsection

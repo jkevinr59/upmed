@@ -36,6 +36,8 @@ Route::get('/track2', function () {
 	return view('track2');
 });
 Route::get('/resetpassword', "ProfilController@reset_password");
+Route::post('/resetpassword',['before'=>'csrf','uses'=> 'ProfilController@reset_password']
+);
 Route::get('/newhome',function(){
 	return view('prototype');
 });

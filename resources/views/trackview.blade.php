@@ -1,33 +1,39 @@
 @extends('layouts.layout3')
 @section('css')
-<link href="public/css/home3.css" rel="stylesheet">
-<link href="public/css/home2.css" rel="stylesheet">
-<link href="public/css/tline.css" rel="stylesheet">
+<link href= <?php echo "'".url('public/css/home3.css')."'"?> rel="stylesheet">
+<link href= <?php echo "'".url('public/css/home2.css')."'"?> rel="stylesheet">
+<link href= <?php echo "'".url('public/css/tline.css')."'"?> rel="stylesheet">
 @endsection
 @section('content')
 
 <div class="row" style="margin-top: 40px;">
 	<div class="well custom-track-filter">
-				
+		<form id='filterform' action=<?php echo "'".url('track/filter')."'"?> role='form' method='get'>
 		<div class="col-xs-5">
 					<div class="form-group">
 						<label class="sr-only">Keluhan</label>
 						<select name="keluhan" class="form-control">
-							<option>Keluhan/Momen</option>
+							<option value="0" <?php if($selectedSubjectID == 0) echo 'selected'?>>Keluhan/Momen</option>
+							<?php foreach($subject as $row){?>
+                                <option value=<?php echo $row['id']; ?> <?php if($row['id'] == $selectedSubjectID) echo 'selected';?>>
+                                <?php echo $row['Name']?>
+                                </option>
+                            <?php } ?>
 						</select>
 					</div>
 		</div>
 		<div class="col-xs-5">
 			<div class="form-group">
 				<label class="sr-only" for="Tanggal">Tanggal</label>
-				<input class="form-control" type="date" name="tanggal">
+				<input class="form-control" type="date" name="tanggal" value=<?php echo $date?>>
 			</div>
 		</div>
 		<div class="col-xs-2">
-			<button id="go-btn" class="round-button">
+			<button id="go-btn" class="round-button" onclick="$('#filterform').submit()">
 					<i class="fa fa-paper-plane fa-fw" style="color: #FFFFFF;"></i>
 			</button>
-		</div>
+		</div>	
+		</form>
 	</div>
 	<div class="well custom-description">
 		<div class="row">
@@ -59,13 +65,15 @@
     </div>
 </div>
 <div class="row" style="margin-top: 20px;">
-	<div class="col-xs-4" style="margin-left:25px; width: 40%;">
+	<div class="col-xs-4" style="margin-left:15px; width: 35%;">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<b> Berat Badan/January - February</b>
 			</div>
 			<div class="panel-body">
-				Grafik Berat Badan
+				<div class="chart-container" style="height: 300px;width: 100%;">
+					<canvas id="trackGraphic"></canvas>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -73,9 +81,9 @@
 	<div class="col-xs-4">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<b><?php echo $timelineTitle;?></b>
+				<center><b><?php echo $timelineTitle;?></b></center>
 			</div>
-			<div class="panel-body">
+			<div class="panel-body" style="overflow-y: scroll; max-height: 52%;">
 				<div class="col-xs-12 tline" style="padding-bottom: 30px;">
 					<div class="row tline-badge">
 						<b class="tline-badge-text"><?php echo intval($lastMonth)?></b>
@@ -107,82 +115,35 @@
 						<b class="tline-badge-text"><?php echo intval($nextMonth)?></b>
 					</div>				
 				</div>
-				<!--			
-				<div class="col-xs-5">
-					<div class="well">
-						<h4>1 February 2018</h4>
-						<b>Title</b>
-						<p id="title-detail">Berkunjung ke Dokter Bambang</p>
-						<b>Deskripsi</b>
-						<p id="description-detail"> Ditemukan alergi makanan yang mengandung susu</p>
-						<button type="button" class="btn btn-info btn-sm">Edit</button>
-						
-					</div>
-				</div>
-				-->
-			</div>
-			<div class="panel-footer">
-				
 			</div>
 		</div>
 	</div>
-</div>
-<!--
-<ul class="timeline">
-                                <li style="height: 60px;">
-                                	<div class="timeline-badge primary">
-                                   	25
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <b class="timeline-title">Kunjungan ke Dokter</b>
-                                        </div>
-                                        <div class="timeline-body">
-                                        <p>Kontrol ke Dokter Bambang</p>
-                                        	<div class="pull-right">
-                                        		<button type="button" class="btn btn-primary btn-sm">
-                                                    View
-                                                </button>
-                                        	</div>   
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="timeline-inverted">
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <b class="timeline-title">Demam</b>
-                                        </div>
-                                        <div class="timeline-body">
-                                        <p>Panas naik turun</p>
-                                        	<div class="pull-right">
-                                        		<button type="button" class="btn btn-primary btn-sm">
-                                                    View
-                                                </button>
-                                        	</div>   
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="height: 60px;">
-                                	<div class="timeline-badge primary">
-                                   	2
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <b class="timeline-title">Trauma</b>
-                                        </div>
-                                        <div class="timeline-body">
-                                        <p>Jatuh dari Sepeda</p>
-                                        	<div class="pull-right">
-                                        		<button type="button" class="btn btn-primary btn-sm">
-                                                    View
-                                                </button>
-                                        	</div>   
-                                        </div>
-                                    </div>
-                                </li>
-                    </ul>-->
+	<button class="btn-add2 btn btn-lg">
+		<center><i class="fa fa-fw fa-plus"></i></center>
+	</button>
+				
+@endsection
+@section('js')
+	<script src= <?php echo "'".url('public/js/chart.min.js')."'" ?>></script>
+	<script type="text/javascript">
+		var lineChart = document.getElementById("trackGraphic").getContext('2d');
+		var data = {
+			labels: [' ',' ',' ',' ',' ',],
+			datasets:[{
+				label: 'Berat Badan',
+				backgroundColor: '#dddddd',
+				borderColor: '#cccccc',
+				data:[12, 19, 3, 5, 2, 3],
+				fill:false,
+			}]
+		}
+		var options = {
+			responsive:true,
+		}
+		var trackChart = new Chart(lineChart, {
+    	type: 'line',
+    	data: data,
+    	options: options
+		});
+	</script>
 @endsection

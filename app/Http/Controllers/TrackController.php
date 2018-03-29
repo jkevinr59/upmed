@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
 use Validator;
 use Illuminate\Support\Facades\Auth;
@@ -39,17 +38,47 @@ class TrackController extends Controller
 	}
 	public function initialTrack(){
 		$user = Auth::user();
+		$subject = Subjek::all();
 		$data['user'] = $user;
+
 		$upperDate = strtotime('next month');
 		$lowerDate = strtotime('last month');
 		$dateRange2 = date('Y-m-d',$upperDate);
 		$dateRange = date('Y-m-d',$lowerDate);
+		$selectedSubjectRange=array();
+		$numericRange = array();
 		$record = Rekor_medis::where('user',$user['id'])->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
 		$data['record'] = $record;
+		$data['date'] = date('"Y-m-d"');
+		$data['selectedSubjectID'] = 0;
+		$data['subject'] = $subject;
 		$data['lastMonth'] = date('m',$lowerDate);
 		$data['currentMonth'] = date('m');
 		$data['nextMonth'] = date('m',$upperDate);
-		$data['timelineTitle'] = date('d F Y',$lowerDate).' - '. date('d F Y',$upperDate);
+		$data['timelineTitle'] = "Timeline";
+		return view("trackview", $data);
+	}
+	public function filterTrack(Request $filter)
+	{
+		$user = Auth::user();
+		$subject = Subjek::all();
+		$filterDate = $filter->input('tanggal');
+		$filterSubject = $filter->input('subject');
+		$data['user'] = $user;
+		$data['selectedSubjectID'] = $filterSubject;
+		$rawFilterDate = strtotime($filterDate);
+		$upperDate = strtotime('next month',$rawFilterDate);
+		$lowerDate = strtotime('last month',$rawFilterDate);
+		$dateRange2 = date('Y-m-d',$upperDate);
+		$dateRange = date('Y-m-d',$lowerDate);
+		$record = Rekor_medis::where('user',$user['id'])->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
+		$data['record'] = $record;
+		$data['subject'] = $subject;
+		$data['date'] = $filterDate;
+		$data['lastMonth'] = date('m',$lowerDate);
+		$data['currentMonth'] = date('m',$rawFilterDate);
+		$data['nextMonth'] = date('m',$upperDate);
+		$data['timelineTitle'] = "Timeline tanggal ".date('d F Y',$rawFilterDate);
 		return view("trackview", $data);
 	}
 }

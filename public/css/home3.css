@@ -215,11 +215,27 @@ border-style: none;
 .btn-add{
 	border-radius: 50%;
 	background-color: #20C4C8;
+	padding:5px;
 	border-style: none;
 	color: #ffffff;
 	position: fixed;
+	height: 50px;
+	width: 50px;
 	top: 88%;
-	left:90%;
+	left:92%;
+}
+.btn-add2{
+	border-radius: 50%;
+	background-color: #20C4C8;
+	padding:5px;
+	border-style: none;
+	color: #ffffff;
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	top: 88%;
+	left:75%;
+	z-index: 103;
 }
 .slash-list{
 	margin-top: 10px;
@@ -227,5 +243,8 @@ border-style: none;
 .slash-list li{
 	list-style: none;
 	display: inline;
+}
+.slash-list li a:hover{
+	color: #dddddd;
 }
 

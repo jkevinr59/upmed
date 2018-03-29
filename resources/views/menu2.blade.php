@@ -106,6 +106,9 @@
             </div>     
         </div>
 </div>
+<button class="btn btn-lg btn-add">
+    <center><i class="fa fa-fw fa-plus"></i></center>
+</button>
 <!--
 <div class="row">
 <div class="col-md-8 col-md-offset-2">

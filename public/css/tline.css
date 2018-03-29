@@ -16,7 +16,7 @@
 .tline-badge::after{
 	content: '';
   	position: absolute;
-  	background-color: #ff3300;
+  	background-color: #dd392a;
   	border-style: solid;
   	left: 50%;
   	width: 50px;

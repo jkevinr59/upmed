@@ -4,17 +4,17 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href=<?php echo "'".url("public/images/favicon.png")."'"?>>
     <title>Upmed : Kenali, Pahami, Pelihara Kesehatan Anda</title>
     <!-- Core CSS - Include with every page -->
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/css/fontawesome-all.css" rel="stylesheet">
+    <link href= <?php echo "'".url('public/css/bootstrap.min.css')."'"?> rel="stylesheet">
+    <link href= <?php echo "'".url('public/css/fontawesome-all.css')."'"?> rel="stylesheet">
    
     <!-- Page-Level Plugin CSS - Dashboard -->
-    <link href="public/css/morris-0.4.3.min.css" rel="stylesheet">
+    <link href=<?php echo "'".url('public/css/morris-0.4.3.min.css')."'" ?> rel="stylesheet">
     <!-- SB Admin CSS - Include with every page -->
-    <link href="public/css/sb-admin.css" rel="stylesheet">
-    <link href="public/css/sb-admin-2.css" rel="stylesheet">
+    <link href= <?php echo "'".url('public/css/sb-admin.css')."'" ?> rel="stylesheet">
+    <link href= <?php echo "'".url('public/css/sb-admin-2.css')."'" ?> rel="stylesheet">
     @yield('css')
 
 </head>
@@ -24,7 +24,7 @@
     <div class="col-xs-3 layout-sidebar">
         <div class="row">
             <div class="col-xs-12 layout-title-box">
-                <center><img src="public/images/whiteupmed2.png" width="84" height="14"></center>
+                <center><img src=<?php echo "'".url("public/images/whiteupmed2.png")."'"?> width="84" height="14"></center>
             </div>
         </div>
         <div class="row">
@@ -162,7 +162,7 @@
                                     </a>   
                                 </li>
                                 <li class="dropdown">
-                                    <a class="dropdown" href="logout">
+                                    <a class="dropdown" href=<?php echo "'".url("logout")."'"?>>
                                         <i class="fa fa-power-off fa-fw"></i>
                                     </a>   
                                 </li>
@@ -172,10 +172,10 @@
                     <div class="row">
                         <div class="col-xs-5 col-xs-offset-7 layout-menu-bar">
                            <ul class="nav navbar-top-links navbar-right">
-                                <li><a href="home">UPLOAD</a></li>
-                                <li><a href="track">TRACK</a></li>
-                                <li><a href="service">LAYANAN</a></li>
-                                <li><a href="profile">PROFIL</a></li>
+                                <li><a href=<?php echo "'".url('home')."'"?>>UPLOAD</a></li>
+                                <li><a href=<?php echo "'".url('track')."'"?>>TRACK</a></li>
+                                <li><a href=<?php echo "'".url('service')."'"?>>LAYANAN</a></li>
+                                <li><a href=<?php echo "'".url('profile')."'"?>>PROFIL</a></li>
                             </ul> 
                         </div>
                     </div>
@@ -194,16 +194,16 @@
         </div>        
     </div>
 </div>
-    <script src="public/js/jquery.min.js"></script>
-    <script src="public/js/bootstrap.min.js"></script>
-    <script src="public/js/jquery.metisMenu.js"></script>
+    <script src=<?php echo '"'.url("public/js/jquery.min.js").'"';?>></script>
+    <script src=<?php echo '"'.url("public/js/bootstrap.min.js").'"';?>></script>
+    <script src=<?php echo '"'.url("public/js/jquery.metisMenu.js").'"';?>></script>
 
     <!-- Page-Level Plugin Scripts - Dashboard -->
-    <script src="public/js/raphael-2.1.0.min.js"></script>
-    <script src="public/js/morris.js"></script>
+    <script src=<?php echo '"'.url("public/js/raphael-2.1.0.min.js").'"';?>></script>
+    <script src=<?php echo '"'.url("public/js/morris.js").'"';?>></script>
 
     <!-- SB Admin Scripts - Include with every page -->
-    <script src="public/js/sb-admin.js"></script>
+    <script src=<?php echo '"'.url("public/js/sb-admin.js").'"';?>></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("#health-group-b").hide();

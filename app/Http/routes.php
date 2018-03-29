@@ -27,6 +27,7 @@ Route::get('/lab','InputController@showViewLab');
 Route::get('/trauma','InputController@showViewTrauma');
 Route::get('/dokter','InputController@showViewDokter');
 Route::get('/track', 'TrackController@initialTrack');
+Route::get('/track/filter', 'TrackController@filterTrack');
 Route::get('/service','ServiceController@show_view');
 Route::get('/logout','HomeController@logout');
 Route::get('/old', 'HomeController@dummy');

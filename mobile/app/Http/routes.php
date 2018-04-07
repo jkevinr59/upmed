@@ -21,9 +21,13 @@ Route::post('/dashboard', 'HomeController@dummy_login');
 
 Route::post('/home', 'HomeController@login');
 Route::get('/home', 'HomeController@home');
-Route::get('/input','InputController@show_view');
-Route::post('/inputdata','InputController@add_rekor_medis2');
-Route::get('/track', 'TrackController@new_track');
+Route::get('/input','InputController@showView');
+Route::post('/input','InputController@inputData');
+Route::get('/lab','InputController@showViewLab');
+Route::get('/trauma','InputController@showViewTrauma');
+Route::get('/dokter','InputController@showViewDokter');
+Route::get('/track', 'TrackController@initialTrack');
+Route::get('/track/filter', 'TrackController@filterTrack');
 Route::get('/service','ServiceController@show_view');
 Route::get('/logout','HomeController@logout');
 Route::get('/old', 'HomeController@dummy');
@@ -33,6 +37,8 @@ Route::get('/track2', function () {
 	return view('track2');
 });
 Route::get('/resetpassword', "ProfilController@reset_password");
+Route::post('/resetpassword',['before'=>'csrf','uses'=> 'ProfilController@reset_password']
+);
 Route::get('/newhome',function(){
 	return view('prototype');
 });

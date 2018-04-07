@@ -23,6 +23,7 @@ class HomeController extends Controller {
 		$user = $authreq->input('username');
 		$password = $authreq->input('password');
 		$query = User::where('username', $user)->first();
+		//dd($query);
 		$hashedpassword = $query->password;
 		$userid= $query->id;
 		if (Hash::check($password, $hashedpassword)) {
@@ -66,7 +67,8 @@ class HomeController extends Controller {
 	}
 	public function Register(Request $request) {
 
-		$username = $request->input('username')."_".date("Ymd");
+		$username = $request->input('username');
+		$email = $request->input('email');
 		//return Redirect::to('/')->with('status',$username);
 		//$ada=DB::table('users')->where('username','=',$request->input('username'))->get();
 		$ada=DB::table('users')->where('username','=',$username)->get();
@@ -76,12 +78,14 @@ class HomeController extends Controller {
 			return Redirect::to('/')->with('status','username yang anda isi sudah terpakai, mohon gunakan username lain');
 		}
 		else{
-			User::create([
+			$user=User::create([
 				'name'=>$request->input('username'),
 				'password'=>bcrypt('1234'),
 				'username'=>$username,
+				'email'=>$email,
 			]);
-			return Redirect::to('/')->with('status', 'anda berhasil mendaftar, anda terdaftar dengan username: '.$username.', dan password: 1234');
+			Auth::loginUsingId($user->id);
+			return Redirect::to('/home')->with('status', 'anda berhasil mendaftar, anda terdaftar dengan username: '.$username.', dan password: 1234');
 		}
 		
 

@@ -13,13 +13,35 @@ use App\Subjek;
 
 class InputController extends Controller
 {
-	public function show_view(){
+	public function showView(){
 		$query=Subjek::all();
 		$data= ['query' => $query];
 		$data['user'] = Auth::user();
+		$data['selectedSubjectID'] = 0;
 		return view("input", $data);
 	}
-	public function add_rekor_medis2(Request $req) {
+	public function showViewLab(){
+		$query=Subjek::all();
+		$data= ['query' => $query];
+		$data['user'] = Auth::user();
+		$data['selectedSubjectID'] = 16;
+		return view("input", $data);
+	}
+	public function showViewTrauma(){
+		$query=Subjek::all();
+		$data= ['query' => $query];
+		$data['user'] = Auth::user();
+		$data['selectedSubjectID'] = 1;
+		return view("input", $data);
+	}
+	public function showViewDokter(){
+		$query=Subjek::all();
+		$data= ['query' => $query];
+		$data['selectedSubjectID'] = 13;
+		$data['user'] = Auth::user();
+		return view("input", $data);
+	}
+	public function inputData(Request $req) {
 	  if($req->isMethod('post'))
         {
             $data = Input::all();
@@ -57,8 +79,10 @@ class InputController extends Controller
 				$table->Title=$title;
 
 				$table->save();
-                $query=Subjek::all();
-	        	return view("home", ['query' => $query]);
+				$data['query']=Subjek::all();
+                $data['selectedSubjectID'] = 0;
+				$data['user'] = Auth::user();
+	        	return view("input", $data);
 			}
 		}
 	}

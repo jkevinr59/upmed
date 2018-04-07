@@ -15,10 +15,7 @@
         <!-- ilustration begins here-->
         <div class="col-md-7">
             <div class="row" style="height:30px; margin-top: 20px;">
-                <div class="col-xs-5 col-xs-offset-1">
-                    <img src="public/images/logo2.png">
-                </div>
-                <div class="col-xs-5 col-xs-offset-1">
+                <div class="col-md-5 col-md-offset-1">
                     <div class="dropdown">
                         <button class="language-button dropdown-toggle" type="button" data-toggle="dropdown"><span class="menu-bar-icon" style="display: inline-block;"><div></div><div></div><div></div></span>Bahasa</button>
                             <ul class="dropdown-menu">
@@ -31,19 +28,15 @@
             <div class="row" style="height:100px;"></div>
             <div class="row ilustration">
                 <div class="col-md-10 col-md-offset-1">
-                    <center>
-                        <h2>SIMPAN, ANALISA & PAHAMI KESEHATAN ANDA. DI MANAPUN,KAPANPUN TANPA BIAYA.</h2>
-                    </center>
-                    <center>
-                        <p>Catat momen-momen penting yang berhubungan dengan kesehatan Anda seperti demam, kadar kolesterol terakhir Anda hingga mencatat berapa rokok yang anda habiskan dalam sehari</p>
-                    </center>
+                    <h2>SIMPAN, ANALISA & PAHAMI KESEHATAN ANDA. DI MANAPUN,KAPANPUN TANPA BIAYA.</h2>
+                    <p>Catat momen-momen penting yang berhubungan dengan kesehatan Anda seperti demam, kadar kolesterol terakhir Anda hingga mencatat berapa rokok yang anda habiskan dalam sehari</p>
                 </div>
             </div> 
         </div>
         <!-- side bar begins here -->    
         <div class="login-side-bar col-md-5">
             <div class="row" style="margin-top: 140px;">
-                <div class="col-xs-8 col-xs-offset-2">
+                <div class="col-md-8 col-md-offset-2">
                             @if (session('status'))
                             
                                 <div id="registered" class="alert alert-success">
@@ -55,13 +48,13 @@
                 </div>
             </div>
             <div class="row">
-                <div id="entry-login" class="col-xs-8 col-xs-offset-2">
+                <div id="entry-login" class="col-md-6 col-md-offset-3">
                     <button id="trial1-button" type="button" class="free-trial-color round-button">Coba Sekarang</button>
                     <button id="login1-button" type="button" class="login-color round-button">Login dengan Akun</button>  
                 </div>
             </div>
             <div id="login-panel" class="row" style="margin-top: 20px;display: none;">
-                <div  class="col-xs-9 col-xs-offset-2">
+                <div  class="col-md-9 col-md-offset-2">
 
                     <form role="form" method="post" action="home">
                         {{ csrf_field() }}
@@ -69,19 +62,19 @@
                         <input class="login-namefield" type="text" name="username" placeholder="Username">
                         <label for="password" class="sr-only">Password</label>
                         <input class="login-namefield" type="password" name="password" placeholder="Password">
-                        <label for="login-button" class="sr-only">Password</label>
                         <input type="Submit" class="login-color round-button-small" name="login" value="Login">
                     </form>
                     <button id="trial2-button" type="button" class="free-trial-color round-button">Daftar Baru</button>
                 </div>
             </div>
             <div id="trial-panel" class="row" style="margin-top: 20px;display: none;">
-                <div  class="col-xs-9 col-xs-offset-2">
-                    <p style="text-align: center;">Silahkan masukkan username di sini</p>
+                <div  class="col-md-9 col-md-offset-2">
                     <form role="form" method="post" action="trial">
                         {{ csrf_field() }}
                         <label for="username" class="sr-only">Username</label>
-                        <input class="trial-namefield" type="text" name="username" placeholder="Username">
+                        <input class="login-namefield" type="text" name="username" placeholder="Username">
+                        <label for="email" class="sr-only">Username</label>
+                        <input class="login-namefield" type="text" name="email" placeholder="Email">
                         <input type="Submit" class="login-color round-button-small" name="register" value="Daftar">
                     </form>
                     <button id="login2-button" type="button" class="login-color round-button">Login dengan Akun</button>    

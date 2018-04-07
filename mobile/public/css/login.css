@@ -68,11 +68,12 @@
     background-color: black;
     margin: 3px 5px;
 }
-.login-namefield,.trial-namefield{
+.login-namefield{
 	margin-top: 10px;
 	margin-left:6px;
 	margin-right:6px;
 	height: 40px;
+	width: 140px;
 	border-radius: 20px;
 	padding:5px;
 	color: #808080;
@@ -86,6 +87,6 @@ input:-webkit-autofill{
 	-webkit-box-shadow: 0 0 0 30px white inset;
 	 -webkit-text-fill-color: #808080 !important;
 }
-#trial2-button{
+#trial2-button,#login2-button{
 	margin-left:50px;
 }

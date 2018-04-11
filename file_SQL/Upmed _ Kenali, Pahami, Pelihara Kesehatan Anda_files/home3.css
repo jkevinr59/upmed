@@ -1,0 +1,250 @@
+.txt-white{
+	color: #ffffff;
+}
+.txt-gray{
+	color: #ddd;
+}
+.txt-gray2{
+	color: #777;
+}
+.calibri{
+	font-family: Calibri, sans-serif;
+}
+.layout-sidebar{
+	background-color: #4f5253;
+	border-color: #dadada;
+	border-width: 0.1;
+	border-style:none solid none none;
+	width: 18%; 
+	height: 100%;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	z-index: 103;
+	padding: 0px;
+}
+hr
+{
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+.layout-topbar{
+	background-image: url("../images/upper_bg.png");
+	background-size: 180px 170px;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	border-color: #dadada;
+	border-style:none;
+	border-width: 0.1;
+	width: 84%;
+	height: 137px;
+	position: fixed;
+	z-index: 102;
+	top: 0%;
+	left: 18%;
+}
+.layout-title-box{
+	background-color: inherit;
+	padding-top:  20px;
+	height: 60px;
+}
+.layout-image-box{
+	margin-top: 10px;
+}
+.layout-image-box img{
+	border-radius: 50%;
+	border-color: #dddddd;
+	border-width:0.2;
+	border-style:solid;
+	background-color: #ddd;
+}
+.layout-profile-info{
+	margin-top: 20px;
+	background-color: inherit;
+	height: 40px;
+}
+.layout-personal-health{
+	margin-top: 30px;
+	background-color: inherit;
+	height: 300px;
+}
+.layout-health-button{
+	margin: 130px 5px 0px 5px;
+	border-style: none;
+	background-color: inherit;
+}
+.layout-edit-button-box{
+	margin-top: 20px;
+}
+.layout-edit-btn{
+	border-radius: 20px;
+	background-color: #20C4C8;
+	border-style: none;
+	color: #ffffff;
+	width: 100%
+}
+.layout-menu-bar{
+	height: 60px;
+	background-color: inherit;
+}
+.layout-menu-bar ul{
+	list-style: none;
+	line-height: 300%;
+}
+.layout-menu-bar ul li{
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+}
+.layout-menu-bar li a{
+	color: #332c2b;
+}
+.layout-tool-bar{
+	height: 70px;
+	background-color:inherit;
+}
+.layout-right-toolbar{
+	background-color: #20c4cb;
+	padding-right: 5px;
+	height: 50px;
+}
+.layout-right-toolbar li a{
+	color: #fff;
+}
+.layout-tool-bar li a{
+	color: #20c4cb;
+}
+.white-canvas{
+	background-image: url("../images/lower_bg.png");
+	background-attachment: fixed;
+	background-size: 82% 100%;
+	background-position: right top;
+	background-repeat: no-repeat;
+	margin-left: 18%;
+	width:82%;
+
+}
+.custom-description{
+	position: fixed;
+	top: 23%;
+	left: 80%;
+	height: 75%;
+	width: 20%;
+	z-index: 101;
+	background-color: #555555;
+}
+.custom-track-filter{
+	background-color: transparent;
+	box-shadow: none;
+	border-style: none;
+	padding-top: 5px;
+	position: fixed;
+	top: 1%;
+	left: 40%;
+	width: 45%;
+	height: 80px;
+	z-index: 103;
+}
+.custom-desc-date{
+	border-style: solid;
+	border-color: #ffffff;
+}
+.desc-edit-button{
+	position: absolute;
+	top: 90%;
+	left: 30%;
+	width: 40%;
+	height: 6%;
+	border-style: none;
+	border-radius: 20px;
+	z-index: 102;
+	background-color: #ffffff;
+}
+.service-panel
+{
+margin-top:10px;
+background-color: #FFFFFF; 
+background-size: cover;
+height:130px; 
+width: 130px;
+border-style: none;
+}
+.custom-search-bar{
+	position: fixed;
+	top: 20%;
+	left: 70%;
+	width: 380px;
+	height: 60px;
+	z-index: 101;
+}
+.custom-search-bar ul{
+	line-height: 200%;
+}
+.custom-panel-portrait > .panel-heading{
+	height: 290px;
+}
+.custom-panel-landscape > .panel-heading{
+	height: 115px;
+}
+.custom-panel-1>.panel-heading {
+	background-color: #69A2A8;
+	color: #fff;
+}
+.custom-panel-2>.panel-heading {
+	background-color: #BFE0EC;
+	color: #FFFaFa;
+}
+.custom-panel-3>.panel-heading {
+	background-color: #777;
+	color: #fff;
+}
+.custom-panel-4>.panel-heading {
+	background-color: #e49e95;
+	color: #fff;
+}
+.custom-panel-landscape > a > .panel-footer,
+.custom-panel-portrait > a > .panel-footer{
+	background-color: #fff;
+}
+.custom-panel-1, 
+.custom-panel-2, 
+.custom-panel-3, 
+.custom-panel-4{
+	border-style: none;
+	box-shadow: 2px 2px #ddd;
+}
+.btn-add{
+	border-radius: 50%;
+	background-color: #20C4C8;
+	padding:5px;
+	border-style: none;
+	color: #ffffff;
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	top: 88%;
+	left:92%;
+}
+.btn-add2{
+	border-radius: 50%;
+	background-color: #20C4C8;
+	padding:5px;
+	border-style: none;
+	color: #ffffff;
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	top: 88%;
+	left:75%;
+	z-index: 103;
+}
+.slash-list{
+	margin-top: 10px;
+}
+.slash-list li{
+	list-style: none;
+	display: inline;
+}
+.slash-list li a:hover{
+	color: #dddddd;
+}
+

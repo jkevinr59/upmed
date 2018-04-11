@@ -71,7 +71,14 @@ class TrackController extends Controller
 		$lowerDate = strtotime('last month',$rawFilterDate);
 		$dateRange2 = date('Y-m-d',$upperDate);
 		$dateRange = date('Y-m-d',$lowerDate);
-		$record = Rekor_medis::where('user',$user['id'])->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
+		$sql=Relasi_Subjek::select('id_relasi')->where('id_subjek',$filterSubject)->get();
+		$relasi=array();
+		for($i=0;$i<sizeof($sql);$i++){
+			$relasi[$i] = $sql[$i]->id_relasi;
+		}
+
+		
+		$record = Rekor_medis::where('user',$user['id'])->whereIn('Subject',$relasi)->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
 		$data['record'] = $record;
 		$data['subject'] = $subject;
 		$data['date'] = $filterDate;

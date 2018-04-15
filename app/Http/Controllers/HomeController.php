@@ -29,9 +29,11 @@ class HomeController extends Controller {
 		if (Hash::check($password, $hashedpassword)) {
 			Auth::loginUsingId($userid,true);
 			$data['user'] = Auth::user();
-			return view('menu2',$data);
+			//return view('menu2',$data);
+			return Redirect::to('/home');
 		} else {
-			return view('login');
+			//return view('login');
+			return Redirect::back();
 		}
 		
 	}

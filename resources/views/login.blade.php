@@ -83,8 +83,11 @@
         </div>
     </div>
     <script src="public/js/login.js"></script>
+    <script src=<?php echo '"'.url("/mobile-detection.js").'"';?>></script>
     <script type="text/javascript">
-        
+        $(document).ready(function(){
+            autoRedirect(1);
+        })
     </script>
     <script type="text/javascript">
             $("#registered").fadeTo(2000, 500).slideUp(500, function(){

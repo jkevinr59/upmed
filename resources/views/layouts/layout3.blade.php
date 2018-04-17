@@ -204,9 +204,11 @@
 
     <!-- SB Admin Scripts - Include with every page -->
     <script src=<?php echo '"'.url("public/js/sb-admin.js").'"';?>></script>
+    <script src=<?php echo '"'.url("/mobile-detection.js").'"';?>></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("#health-group-b").hide();
+            autoRedirect(1);
         })
     </script>
     @yield('js')

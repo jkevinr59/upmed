@@ -15,7 +15,7 @@
 						<select name="keluhan" class="form-control">
 							<option value="0" <?php if($selectedSubjectID == 0) echo 'selected'?>>Keluhan/Momen</option>
 							<?php foreach($subject as $row){?>
-                                <option value=<?php echo $row['id']; ?> <?php if($row['id'] == $selectedSubjectID) echo 'selected';?>>
+                                <option value = <?php echo '"'.$row['id'].'"'; ?> <?php if($row['id'] == $selectedSubjectID) echo 'selected';?>>
                                 <?php echo $row['Name']?>
                                 </option>
                             <?php } ?>

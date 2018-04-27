@@ -63,7 +63,7 @@ class TrackController extends Controller
 		$user = Auth::user();
 		$subject = Subjek::all();
 		$filterDate = $filter->input('tanggal');
-		$filterSubject = $filter->input('subject');
+		$filterSubject = $filter->input('keluhan');
 		$data['user'] = $user;
 		$data['selectedSubjectID'] = $filterSubject;
 		$rawFilterDate = strtotime($filterDate);
@@ -76,7 +76,7 @@ class TrackController extends Controller
 		for($i=0;$i<sizeof($sql);$i++){
 			$relasi[$i] = $sql[$i]->id_relasi;
 		}
-
+		$relasi[sizeof($sql)]=$filterSubject;
 		
 		$record = Rekor_medis::where('user',$user['id'])->whereIn('Subject',$relasi)->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
 		$data['record'] = $record;

@@ -71,14 +71,21 @@ class TrackController extends Controller
 		$lowerDate = strtotime('last month',$rawFilterDate);
 		$dateRange2 = date('Y-m-d',$upperDate);
 		$dateRange = date('Y-m-d',$lowerDate);
-		$sql=Relasi_Subjek::select('id_relasi')->where('id_subjek',$filterSubject)->get();
-		$relasi=array();
-		for($i=0;$i<sizeof($sql);$i++){
-			$relasi[$i] = $sql[$i]->id_relasi;
-		}
-		$relasi[sizeof($sql)]=$filterSubject;
+		if($filterSubject != 0)
+		{
+			$sql=Relasi_Subjek::select('id_relasi')->where('id_subjek',$filterSubject)->get();
+			$relasi=array();
+			for($i=0;$i<sizeof($sql);$i++){
+				$relasi[$i] = $sql[$i]->id_relasi;
+			}
+			$relasi[sizeof($sql)]=$filterSubject;
 		
-		$record = Rekor_medis::where('user',$user['id'])->whereIn('Subject',$relasi)->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
+			$record = Rekor_medis::where('user',$user['id'])->whereIn('Subject',$relasi)->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
+		}
+		else
+		{
+			$record = Rekor_medis::where('user',$user['id'])->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
+		}
 		$data['record'] = $record;
 		$data['subject'] = $subject;
 		$data['date'] = $filterDate;

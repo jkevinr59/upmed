@@ -137,7 +137,7 @@
 @endsection
 @section('js')
 	<script src= <?php echo "'".url('public/js/detailAjax.js')."'" ?>></script>
-	<script src= <?php echo "'".url('public/js/chart.min.js')."'" ?>></script>
+	<script src= <?php echo "'".url('public/js/Chart.min.js')."'" ?>></script>
 	<script type="text/javascript">
 		var lineChart = document.getElementById("trackGraphic").getContext('2d');
 		var data = {

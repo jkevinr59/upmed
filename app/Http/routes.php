@@ -33,9 +33,7 @@ Route::get('/logout','HomeController@logout');
 Route::get('/old', 'HomeController@dummy');
 Route::get('/profile', 'ProfilController@show_view');
 Route::get('/edit', 'ProfilController@edit_show_view');
-Route::get('/track2', function () {
-	return view('track2');
-});
+Route::get('/getdetail', 'TrackController@getDetail');
 Route::get('/resetpassword', "ProfilController@reset_password");
 Route::post('/resetpassword',['before'=>'csrf','uses'=> 'ProfilController@reset_password']
 );

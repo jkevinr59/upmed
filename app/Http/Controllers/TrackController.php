@@ -95,4 +95,18 @@ class TrackController extends Controller
 		$data['timelineTitle'] = "Timeline tanggal ".date('d F Y',$rawFilterDate);
 		return view("trackview", $data);
 	}
+	public function getDetail(Request $req)
+	{
+		$selectID = $req ->input('id');
+		$sql = Rekor_medis::where('record_id',$selectID)->first();
+		$data['description'] =  $sql['Description_value'];
+		$data['title'] = $sql['Title'];
+		$rawDate=strtotime($sql['Datetime']);
+		$data['day'] = date('d',$rawDate);
+		$data['month'] = strtoupper(date('M',$rawDate));
+		$subjectID = $sql['Subject'];
+		$sql2 = Subjek::select('Name')->where('id',$subjectID)->first();
+		$data['subject'] = $sql2['Name'];
+		return response()->json($data);
+	}
 }

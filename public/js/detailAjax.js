@@ -5,11 +5,13 @@ title
 description
 subject
 */
-function detail($id)
+var recordId=0;
+function detail(id)
 {
-	console.log('ajax detail ' + $id + ':');
+	console.log('ajax detail ' + id + ':');
+	recordId = id;
 	var select_id = {}
-	select_id['id'] = $id
+	select_id['id'] = id
 	console.log(select_id);
 	$.ajax({
 		url: 'getdetail',
@@ -21,6 +23,8 @@ function detail($id)
 			data["title"] = json.title;
 			data["description"] = json.description;
 			data["subject"] = json.subject;
+			data["day"] = json.day;
+			data["month"] = json.month;
 			console.log(data);
 			changeDetail(data);
 			console.log('ajax success');
@@ -33,4 +37,6 @@ function changeDetail(data)
 	$('#title').text(data.title);
 	$("#description").text(data.description);
 	$('#subject').text(data.subject);
+	$('#date-day').text(data.day);
+	$('#date-month').text(data.month);
 }

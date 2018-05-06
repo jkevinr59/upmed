@@ -100,23 +100,19 @@
 					<div class="row tline-badge">
 						<b class="tline-badge-text"><?php echo intval($lastMonth)?></b>
 					</div>
+					<?php
+					foreach($recordPrev as $row){
+						?>
 					<div class="tline-content">
-						<div class="tline-date">15 Januari</div>
-						<button class="tline-head">Demam</button>
+						<div class="tline-date"><?php echo date('d F',strtotime($row['Datetime']));?></div>
+						<button class="tline-head" onclick=<?php echo '"detail('.$row["record_id"].')"'?>><?php echo $row['Title'];?></button>
 					</div>
-					<div class="tline-content">
-						<div class="tline-date">18 Januari</div>
-						<button class="tline-head">Periksa Gula Darah</button>
-					</div>	
-					<div class="tline-content">
-						<div class="tline-date">20 Januari</div>
-						<button class="tline-head">Kunjungan Ke Dokter</button>
-					</div>
+					<?php }?>
 					<div class="row tline-badge">
 						<b class="tline-badge-text"><?php echo intval($currentMonth)?></b>
 					</div>
 					<?php
-					foreach($record as $row){
+					foreach($recordCurrent as $row){
 						?>
 					<div class="tline-content">
 						<div class="tline-date"><?php echo date('d F',strtotime($row['Datetime']));?></div>
@@ -125,7 +121,15 @@
 					<?php }?>
 					<div class="row tline-badge">
 						<b class="tline-badge-text"><?php echo intval($nextMonth)?></b>
-					</div>				
+					</div>
+					<?php
+					foreach($recordNext as $row){
+						?>
+					<div class="tline-content">
+						<div class="tline-date"><?php echo date('d F',strtotime($row['Datetime']));?></div>
+						<button class="tline-head" onclick=<?php echo '"detail('.$row["record_id"].')"'?>><?php echo $row['Title'];?></button>
+					</div>
+					<?php }?>				
 				</div>
 			</div>
 		</div>

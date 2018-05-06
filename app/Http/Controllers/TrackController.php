@@ -43,12 +43,14 @@ class TrackController extends Controller
 
 		$upperDate = strtotime('next month');
 		$lowerDate = strtotime('last month');
-		$dateRange2 = date('Y-m-d',$upperDate);
-		$dateRange = date('Y-m-d',$lowerDate);
 		$selectedSubjectRange=array();
 		$numericRange = array();
-		$record = Rekor_medis::where('user',$user['id'])->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
-		$data['record'] = $record;
+		$recordPrev = Rekor_medis::where('user',$user['id'])->whereMonth('Datetime','=',date('m',$lowerDate))->whereYear('Datetime','=',date('Y',$lowerDate))->orderBy('Datetime')->get();
+		$recordCurrent = Rekor_medis::where('user',$user['id'])->whereMonth('Datetime','=',date('m'))->whereYear('Datetime','=',date('Y'))->orderBy('Datetime')->get();
+		$recordNext = Rekor_medis::where('user',$user['id'])->whereMonth('Datetime','=',date('m',$upperDate))->whereYear('Datetime','=',date('Y',$upperDate))->orderBy('Datetime')->get();
+		$data['recordCurrent'] = $recordCurrent;
+		$data['recordNext'] = $recordNext;
+		$data['recordPrev'] = $recordPrev;
 		$data['date'] = date('"Y-m-d"');
 		$data['selectedSubjectID'] = 0;
 		$data['subject'] = $subject;
@@ -69,8 +71,6 @@ class TrackController extends Controller
 		$rawFilterDate = strtotime($filterDate);
 		$upperDate = strtotime('next month',$rawFilterDate);
 		$lowerDate = strtotime('last month',$rawFilterDate);
-		$dateRange2 = date('Y-m-d',$upperDate);
-		$dateRange = date('Y-m-d',$lowerDate);
 		if($filterSubject != 0)
 		{
 			$sql=Relasi_Subjek::select('id_relasi')->where('id_subjek',$filterSubject)->get();
@@ -80,13 +80,19 @@ class TrackController extends Controller
 			}
 			$relasi[sizeof($sql)]=$filterSubject;
 		
-			$record = Rekor_medis::where('user',$user['id'])->whereIn('Subject',$relasi)->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
+			$recordPrev = Rekor_medis::where('user',$user['id'])->whereIn('Subject',$relasi)->whereMonth('Datetime','=',date('m',$lowerDate))->whereYear('Datetime','=',date('Y',$lowerDate))->orderBy('Datetime')->get();
+			$recordCurrent = Rekor_medis::where('user',$user['id'])->whereIn('Subject',$relasi)->whereMonth('Datetime','=',date('m',$rawFilterDate))->whereYear('Datetime','=',date('Y',$rawFilterDate))->orderBy('Datetime')->get();
+			$recordNext = Rekor_medis::where('user',$user['id'])->whereIn('Subject',$relasi)->whereMonth('Datetime','=',date('m',$upperDate))->whereYear('Datetime','=',date('Y',$upperDate))->orderBy('Datetime')->get();
 		}
 		else
 		{
-			$record = Rekor_medis::where('user',$user['id'])->whereBetween('Datetime',array($dateRange,$dateRange2 ))->orderBy('Datetime')->get();
+			$recordPrev = Rekor_medis::where('user',$user['id'])->whereMonth('Datetime','=',date('m',$lowerDate))->whereYear('Datetime','=',date('Y',$lowerDate))->orderBy('Datetime')->get();
+			$recordCurrent = Rekor_medis::where('user',$user['id'])->whereMonth('Datetime','=',date('m',$rawFilterDate))->whereYear('Datetime','=',date('Y',$rawFilterDate))->orderBy('Datetime')->get();
+			$recordNext = Rekor_medis::where('user',$user['id'])->whereMonth('Datetime','=',date('m',$upperDate))->whereYear('Datetime','=',date('Y',$upperDate))->orderBy('Datetime')->get();
 		}
-		$data['record'] = $record;
+		$data['recordCurrent'] = $recordCurrent;
+		$data['recordNext'] = $recordNext;
+		$data['recordPrev'] = $recordPrev;
 		$data['subject'] = $subject;
 		$data['date'] = $filterDate;
 		$data['lastMonth'] = date('m',$lowerDate);
@@ -108,5 +114,9 @@ class TrackController extends Controller
 		$sql2 = Subjek::select('Name')->where('id',$subjectID)->first();
 		$data['subject'] = $sql2['Name'];
 		return response()->json($data);
+	}
+	public function getRecommendation(Request $req)
+	{
+		$selectID = $req ->input('id');
 	}
 }

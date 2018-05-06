@@ -12,7 +12,7 @@ function detail(id)
 	recordId = id;
 	var select_id = {}
 	select_id['id'] = id
-	console.log(select_id);
+	console.log(recordId);
 	$.ajax({
 		url: 'getdetail',
 		data: select_id,

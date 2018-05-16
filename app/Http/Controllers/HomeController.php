@@ -23,7 +23,6 @@ class HomeController extends Controller {
 		$user = $authreq->input('username');
 		$password = $authreq->input('password');
 		$query = User::where('username', $user)->first();
-		//dd($query);
 		$hashedpassword = $query->password;
 		$userid= $query->id;
 		if (Hash::check($password, $hashedpassword)) {
@@ -99,9 +98,22 @@ class HomeController extends Controller {
 		}
 		return response()->json(['success' => '1']);*/
 	}
-	/*public function to_time()
+	public function adminLogin(Request $authreq)
 	{
-		echo date("Ymd");
-
-	}*/
+		$user = $authreq->input('user');
+		$pw = $authreq->input('password');
+		$sql = User::where('username',$user)->first();
+		$query = User::where('username', $user)->first();
+		$hashedpassword = $query->password;
+		$userid= $query->id;
+		if (Hash::check($password, $hashedpassword)) {
+			$state = 0; //trueLogin
+			$role = $query->role;
+		}
+		else{
+			$state = 1;
+			$role = 0;
+		}
+		return response()->json(['state' => $state,'role' =>$role]);
+	}
 }

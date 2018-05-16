@@ -118,5 +118,10 @@ class TrackController extends Controller
 	public function getRecommendation(Request $req)
 	{
 		$selectID = $req ->input('id');
+		$sql = Rekor_medis::select('Subject')->where('record_id',$selectID)->first();
+		$subject = $sql['Subject'];
+		$sql = Subjek::where('id',$subject)->first();
+		$data=$sql;
+		return response()->json($data);
 	}
 }

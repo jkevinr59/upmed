@@ -8,5 +8,5 @@ class Subjek extends Model
 {
     //
     protected $table = 'subjek';
-    protected $fillable = ['id','name','Subjek'];
+    protected $fillable = ['id','Name','Group','Type'];
 }

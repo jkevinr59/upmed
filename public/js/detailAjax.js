@@ -29,7 +29,7 @@ function detail(id)
 			changeDetail(data);
 			console.log('ajax success');
 		}
-	})
+	});
 }
 
 function changeDetail(data)
@@ -39,4 +39,20 @@ function changeDetail(data)
 	$('#subject').text(data.subject);
 	$('#date-day').text(data.day);
 	$('#date-month').text(data.month);
+}
+function showRecommendation()
+{	
+	var select_id = {}
+	select_id['id'] = recordId;
+	console.log(recordId);
+	$.ajax({
+		url: 'recom',
+		data: select_id,
+		dataType: 'json',
+		timeout: 1500,
+		success: function(json){
+			console.log('ajax success');
+			console.log(json);
+		}
+	});
 }

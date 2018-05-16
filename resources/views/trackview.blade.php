@@ -172,6 +172,7 @@
 					$('#detail-page').show();
 					break;
 				case 1:
+					showRecommendation();
 					$('#share-page').hide();
 					$('#detail-page').hide();
 					$('#recommendation-page').show();

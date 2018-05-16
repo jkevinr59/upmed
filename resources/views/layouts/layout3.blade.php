@@ -159,7 +159,11 @@
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         <i class="fa fa-envelope fa-fw"></i>
                                         <i class="fa fa-caret-down"></i>
-                                    </a>   
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="new_message">New Message</a></li>
+                                        <li><a href="#">Inbox</a></li>
+                                    </ul>   
                                 </li>
                                 <li class="dropdown">
                                     <a class="dropdown" href=<?php echo "'".url("logout")."'"?>>

@@ -11,39 +11,39 @@
 |
  */
 
-Route::get('/', 'HomeController@index'
-);
-Route::get('/to_time', 'HomeController@to_time'
-);
-Route::post('/trial',['before'=>'csrf','uses'=> 'HomeController@register']
-);
+Route::get('/', 'HomeController@index');
+Route::post('/trial',['before'=>'csrf','uses'=> 'HomeController@register']);
 Route::post('/dashboard', 'HomeController@dummy_login');
-
 Route::post('/home', 'HomeController@login');
 Route::get('/home', 'HomeController@home');
+Route::get('/logout','HomeController@logout');
+Route::get('/old', 'HomeController@dummy');
+
 Route::get('/input','InputController@showView');
 Route::post('/input','InputController@inputData');
 Route::get('/lab','InputController@showViewLab');
 Route::get('/trauma','InputController@showViewTrauma');
 Route::get('/dokter','InputController@showViewDokter');
+
 Route::get('/track', 'TrackController@initialTrack');
 Route::get('/track/filter', 'TrackController@filterTrack');
-Route::get('/service','ServiceController@show_view');
-Route::get('/logout','HomeController@logout');
-Route::get('/old', 'HomeController@dummy');
-Route::get('/profile', 'ProfilController@show_view');
-Route::get('/edit', 'ProfilController@edit_show_view');
 Route::get('/getdetail', 'TrackController@getDetail');
-Route::get('/recom', 'TrackController@getRecommendation');
 Route::get('track/getdetail', 'TrackController@getDetail');
 Route::get('track/recom', 'TrackController@getRecommendation');
+Route::get('/recom', 'TrackController@getRecommendation');
+
+Route::get('/service','ServiceController@show_view');
+
+Route::get('/profile', 'ProfilController@show_view');
+Route::get('/edit', 'ProfilController@edit_show_view');
 Route::get('/resetpassword', "ProfilController@reset_password");
-Route::post('/resetpassword',['before'=>'csrf','uses'=> 'ProfilController@reset_password']
-);
+Route::post('/resetpassword',['before'=>'csrf','uses'=> 'ProfilController@reset_password']);
+
 Route::get('/newhome',function(){
 	return view('prototype');
 });
-Route::get('/track/{id}/{id2}/{id3}', 'TrackController@single_track');
+
+
 
 
 //Route::get('/validateuser', 'HomeController@validate_user');

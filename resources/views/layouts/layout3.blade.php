@@ -161,8 +161,8 @@
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="new_message">New Message</a></li>
-                                        <li><a href="#">Inbox</a></li>
+                                        <li><a href="mail">New Message</a></li>
+                                        <li><a href="inbox">Inbox</a></li>
                                     </ul>   
                                 </li>
                                 <li class="dropdown">

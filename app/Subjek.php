@@ -9,4 +9,5 @@ class Subjek extends Model
     //
     protected $table = 'subjek';
     protected $fillable = ['id','Name','Group','Type'];
+    public $timestamps=false;
 }

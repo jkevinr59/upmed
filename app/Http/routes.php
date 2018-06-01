@@ -39,6 +39,10 @@ Route::get('/edit', 'ProfilController@edit_show_view');
 Route::get('/resetpassword', "ProfilController@reset_password");
 Route::post('/resetpassword',['before'=>'csrf','uses'=> 'ProfilController@reset_password']);
 
+Route::get('/mail', 'MailController@newMail');
+Route::post('/mail','MailController@saveMail');
+Route::get('/inbox','MailController@inbox');
+
 Route::get('/newhome',function(){
 	return view('prototype');
 });

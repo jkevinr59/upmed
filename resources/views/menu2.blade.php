@@ -8,6 +8,7 @@
     <div class="col-xs-4 col-xs-offset-2">
         <h4 class="calibri">U P L O A D</h4>
         <p class="txt-gray2 calibri">Upload histori medismu di sini</p>
+        
     </div>
 </div>
 <div class="row" style="padding-top: 30px;height: 85%;">

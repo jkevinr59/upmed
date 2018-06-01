@@ -15,7 +15,7 @@
                         		<label class="control-label" for="recipient" style="text-align: left;">Kepada:</label>
                         	</div>
                             <div class="col-xs-5">
-                            	<input type="text" class="form-control" name="Recipient">
+                            	<input type="text" class="form-control" name="recipient">
                             </div>
                         </div>
                         <div class="form-group">

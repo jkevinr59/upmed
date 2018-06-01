@@ -26,12 +26,12 @@ class MailController extends Controller
     {
     	
     		$user = Auth::user();
-
+			$recipient = User::where('name',$request->recipient)->first();
     		$mail = new Pesan;
     		$mail->Title = $request->title;
     		$mail->Message = nl2br($request->Content);
-    		$mail->User = '50';
-    		$mail->Recipient = '0';
+    		$mail->User = $user['id'];
+    		$mail->Recipient = $recipient['id'];
     		$mail->Status = '0';
     		$mail->save();
 
@@ -46,6 +46,13 @@ class MailController extends Controller
 		$data['user'] = Auth::user();
 		$userId = $data['user']['id']; 
 		$data['mail'] = Pesan::where('recipient',$userId)->get();
+		$count=1;
+		foreach($data['mail'] as $mail){
+			$recipient = User::where('id',$mail->recipient)->first();
+			$mail['recipient_name'] = $recipient->name;
+			$mail['#'] = $count;
+			$count++;
+		} 
         return view("inbox",$data);
     }
 }

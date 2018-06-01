@@ -249,3 +249,12 @@ border-style: none;
 	color: #dddddd;
 }
 
+.clickable-row{
+	cursor: pointer;
+}
+.clickable-row:hover{
+	background-color: #dddddd;
+}
+.unread-row td{
+	font-weight: bold;
+}

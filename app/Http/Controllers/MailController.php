@@ -41,9 +41,11 @@ class MailController extends Controller
 		return view('newmail',$data);
     }
 
-    public function inbox(Request $request)
+    public function inbox()
     {
-        $data['user'] = Auth::user();
+		$data['user'] = Auth::user();
+		$userId = $data['user']['id']; 
+		$data['mail'] = Pesan::where('recipient',$userId)->get();
         return view("inbox",$data);
     }
 }

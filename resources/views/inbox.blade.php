@@ -20,12 +20,11 @@
 	        		<th>Tanggal Diterima</th>
         		</tr>
         		<tbody>
-        			<tr>
+        			<tr class="unread-row clickable-row" data-href="#">
         				<td>1</td>
         				<td>Admin</td>
         				<td>Selamat Datang di Upmed</td>
         				<td>26 Mei 2018</td>
-        				<td><a href="#">Lihat</a></td>
         			</tr>
         			<tr></tr>
         			<tr></tr>
@@ -34,4 +33,15 @@
         	</table>
 		</div>
     </div>
+	
+@endsection
+@section('js')
+	<script type="text/javascript">
+		jQuery().ready(function(){
+
+		});
+		jQuery('.clickable-row').click(function(){
+			window.location.assign(jQuery(this).data("href"));
+		});
+	</script>
 @endsection

@@ -27,24 +27,24 @@
         				<td>Selamat Datang di Upmed</td>
         				<td>26 Mei 2018</td>
 					</tr>-->
-					<?php 
-					foreach($mail as $row){
-						$mailClass = "clickable-row";
-						$form = "mail-".$row->id;
-						if($row['status']=="0"){
-							$mailClass ="unread-row ".$mailClass;
-						}	
-					?>
-					<tr data-form=<?php echo "'".$form."'";?> class=<?php echo "'".$mailClass."'";?>>
-						<form method ="POST" role = "form" id=<?php echo "'".$form."'"?> action="mail/view">
-							<input type="hidden" name="mail_id" value=<?php echo '"'.$row->id.'"'?>>
-						</form>
-						<td><?php echo $row['#']?></td>
-						<td><?php echo $row['from_name']?></td>
-						<td><?php echo $row['message']?></td>
-						<td><?php echo date('d F Y',strtotime($row['datetime']))?></td>
-					</tr>
-					<?php } ?>
+					@foreach($mail as $row)
+						<?php 
+							$form = "mail-".$row->id;
+						?>
+						@if($row["status"] ==  0 )
+						<tr  data-form="{{$form}}" class="unread-row clickable-row">
+						@elseif($row["status"] == 1 )
+						<tr  data-form="{{$form}}" class = "clickable-row" >
+						@endif
+							<form method ="POST" role = "form" id="{{$form}}" action="mail/view">
+								<input type="hidden" name="mail_id" value="{{$row->id}}">
+							</form>
+							<td>{{$row['#']}}</td>
+							<td>{{$row['from_name']}}</td>
+							<td>{{$row['title']}}</td>
+							<td>{{date('d F Y',strtotime($row['datetime']))}}</td>
+						</tr>
+					@endforeach
         		</tbody>	
         	</table>
 		</div>

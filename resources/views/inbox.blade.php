@@ -30,20 +30,21 @@
 					<?php 
 					foreach($mail as $row){
 						$mailClass = "clickable-row";
-						$href = "mail/".$row->id;
+						$form = "mail-".$row->id;
 						if($row['status']=="0"){
 							$mailClass ="unread-row ".$mailClass;
 						}	
 					?>
-					<tr data-href=<?php echo $href;?> class=<?php echo "'".$mailClass."'";?>>
+					<tr data-form=<?php echo "'".$form."'";?> class=<?php echo "'".$mailClass."'";?>>
+						<form method ="POST" role = "form" id=<?php echo "'".$form."'"?> action="mail/view">
+							<input type="hidden" name="mail_id" value=<?php echo '"'.$row->id.'"'?>>
+						</form>
 						<td><?php echo $row['#']?></td>
-						<td><?php echo $row['recipient_name']?></td>
+						<td><?php echo $row['from_name']?></td>
 						<td><?php echo $row['message']?></td>
 						<td><?php echo date('d F Y',strtotime($row['datetime']))?></td>
 					</tr>
 					<?php } ?>
-        			<tr></tr>
-        			<tr></tr>
         		</tbody>	
         	</table>
 		</div>
@@ -56,7 +57,8 @@
 
 		});
 		jQuery('.clickable-row').click(function(){
-			window.location.assign(jQuery(this).data("href"));
+			var submitId = "#" + $(this).data("form");
+			$(submitId).submit();
 		});
 	</script>
 @endsection

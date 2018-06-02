@@ -48,8 +48,8 @@ class MailController extends Controller
 		$data['mail'] = Pesan::where('recipient',$userId)->get();
 		$count=1;
 		foreach($data['mail'] as $mail){
-			$recipient = User::where('id',$mail->recipient)->first();
-			$mail['recipient_name'] = $recipient->name;
+			$from = User::where('id',$mail->user)->first();
+			$mail['from_name'] = $from->name;
 			$mail['#'] = $count;
 			$count++;
 		} 

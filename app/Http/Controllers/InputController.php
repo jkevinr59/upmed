@@ -18,28 +18,28 @@ class InputController extends Controller
 		$data= ['query' => $query];
 		$data['user'] = Auth::user();
 		$data['selectedSubjectID'] = 0;
-		return view("input", $data);
+		return view("upload.input", $data);
 	}
 	public function showViewLab(){
 		$query=Subjek::all();
 		$data= ['query' => $query];
 		$data['user'] = Auth::user();
 		$data['selectedSubjectID'] = 16;
-		return view("input", $data);
+		return view("upload.input", $data);
 	}
 	public function showViewTrauma(){
 		$query=Subjek::all();
 		$data= ['query' => $query];
 		$data['user'] = Auth::user();
 		$data['selectedSubjectID'] = 1;
-		return view("input", $data);
+		return view("upload.input", $data);
 	}
 	public function showViewDokter(){
 		$query=Subjek::all();
 		$data= ['query' => $query];
 		$data['selectedSubjectID'] = 13;
 		$data['user'] = Auth::user();
-		return view("input", $data);
+		return view("upload.input", $data);
 	}
 	public function inputData(Request $req) {
 	  if($req->isMethod('post'))
@@ -82,7 +82,7 @@ class InputController extends Controller
 				$data['query']=Subjek::all();
                 $data['selectedSubjectID'] = 0;
 				$data['user'] = Auth::user();
-	        	return view("input", $data);
+	        	return view("upload.input", $data);
 			}
 		}
 	}

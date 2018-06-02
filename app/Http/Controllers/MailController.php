@@ -19,7 +19,7 @@ class MailController extends Controller
     public function newMail()
     {
     	$data['user'] = Auth::user();
-    	return view("newmail",$data);
+    	return view("mail.new",$data);
     }
 
     public function saveMail(Request $request)
@@ -38,7 +38,7 @@ class MailController extends Controller
     	
 
     	$data['user'] = Auth::user();
-		return view('newmail',$data);
+		return view('mail.new',$data);
     }
 
     public function inbox()
@@ -53,6 +53,14 @@ class MailController extends Controller
 			$mail['#'] = $count;
 			$count++;
 		} 
-        return view("inbox",$data);
-    }
+        return view("mail.inbox",$data);
+	}
+
+	public function mailView(Request $request){
+		$mailId = $request->id;
+		$mailData = Pesan::where('id',$mailId)->first();
+		$userData = Auth::user();
+		$data['user']= $userData;
+		return view('mail.new',$data);
+	} 
 }

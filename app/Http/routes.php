@@ -42,6 +42,7 @@ Route::post('/resetpassword',['before'=>'csrf','uses'=> 'ProfilController@reset_
 Route::get('/mail', 'MailController@newMail');
 Route::post('/mail','MailController@saveMail');
 Route::get('/inbox','MailController@inbox');
+Route::post('/inbox/view','MailController@mailView');
 
 Route::get('/newhome',function(){
 	return view('prototype');

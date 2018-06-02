@@ -133,7 +133,7 @@ hr
 	background-color: #555555;
 }
 .custom-track-filter{
-	background-color: transparent;
+	/*background-color: transparent;*/
 	box-shadow: none;
 	border-style: none;
 	padding-top: 5px;

@@ -17,7 +17,7 @@ class HomeController extends Controller {
 
 	public function index() {
 		Auth::logout();
-		return view('login');
+		return view('home.login');
 	}
 	public function login(Request $authreq){
 		$user = $authreq->input('username');
@@ -38,7 +38,7 @@ class HomeController extends Controller {
 	}
 	public function home(){
 		$data['user'] = Auth::user();
-		return view('menu2',$data);
+		return view('home.menu',$data);
 	}
 	public function authenticate(Request $authreq) {
 		$user = $authreq->input('user');
@@ -64,7 +64,7 @@ class HomeController extends Controller {
 	}
 	public function logout(){
 		Auth::logout();
-		return view('login');
+		return view('home.login');
 	}
 	public function Register(Request $request) {
 

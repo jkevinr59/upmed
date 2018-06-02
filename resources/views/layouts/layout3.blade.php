@@ -7,21 +7,21 @@
     <link rel="icon" type="image/x-icon" href=<?php echo "'".url("public/images/favicon.png")."'"?>>
     <title>Upmed : Kenali, Pahami, Pelihara Kesehatan Anda</title>
     <!-- Core CSS - Include with every page -->
-    <link href= <?php echo "'".url('public/css/bootstrap.min.css')."'"?> rel="stylesheet">
-    <link href= <?php echo "'".url('public/css/fontawesome-all.css')."'"?> rel="stylesheet">
+    <link href= "{{url('public/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href= "{{url('public/css/fontawesome-all.css')}}"rel="stylesheet">
    
     <!-- Page-Level Plugin CSS - Dashboard -->
-    <link href=<?php echo "'".url('public/css/morris-0.4.3.min.css')."'" ?> rel="stylesheet">
+    <link href="{{url('public/css/morris-0.4.3.min.css')}}" rel="stylesheet">
     <!-- SB Admin CSS - Include with every page -->
-    <link href= <?php echo "'".url('public/css/sb-admin.css')."'" ?> rel="stylesheet">
-    <link href= <?php echo "'".url('public/css/sb-admin-2.css')."'" ?> rel="stylesheet">
+    <link href= "{{url('public/css/sb-admin.css')}}" rel="stylesheet">
+    <link href= "{{url('public/css/sb-admin-2.css')}}" rel="stylesheet">
     @yield('css')
 
 </head>
 
 <body style="background-color: #ffffff;padding-top: 0px;">
 <div class="container-fluid" style="padding: 0px;">
-    <div class="col-xs-3 layout-sidebar">
+    <div class="col-xs-3 layout-sidebar" >
         <div class="row">
             <div class="col-xs-12 layout-title-box">
                 <center><img src=<?php echo "'".url("public/images/whiteupmed2.png")."'"?> width="84" height="14"></center>
@@ -176,10 +176,10 @@
                     <div class="row">
                         <div class="col-xs-5 col-xs-offset-7 layout-menu-bar">
                            <ul class="nav navbar-top-links navbar-right">
-                                <li><a href=<?php echo "'".url('home')."'"?>>UPLOAD</a></li>
-                                <li><a href=<?php echo "'".url('track')."'"?>>TRACK</a></li>
-                                <li><a href=<?php echo "'".url('service')."'"?>>LAYANAN</a></li>
-                                <li><a href=<?php echo "'".url('profile')."'"?>>PROFIL</a></li>
+                                <li><a href="{{url('home')}}">UPLOAD</a></li>
+                                <li><a href="{{url('track')}}">TRACK</a></li>
+                                <li><a href="{{url('service')}}">LAYANAN</a></li>
+                                <li><a href="{{url('profile')}}">PROFIL</a></li>
                             </ul> 
                         </div>
                     </div>
@@ -198,17 +198,15 @@
         </div>        
     </div>
 </div>
-    <script src=<?php echo '"'.url("public/js/jquery.min.js").'"';?>></script>
-    <script src=<?php echo '"'.url("public/js/bootstrap.min.js").'"';?>></script>
-    <script src=<?php echo '"'.url("public/js/jquery.metisMenu.js").'"';?>></script>
-
+    <script src="{{url('public/js/jquery.min.js')}}"></script>
+    <script src="{{url('public/js/bootstrap.min.js')}}"></script>
+    <script src="{{url('public/js/jquery.metisMenu.js')}}"></script>
     <!-- Page-Level Plugin Scripts - Dashboard -->
-    <script src=<?php echo '"'.url("public/js/raphael-2.1.0.min.js").'"';?>></script>
-    <script src=<?php echo '"'.url("public/js/morris.js").'"';?>></script>
-
+    <script src="{{url('public/js/raphael-2.1.0.min.js')}}"></script>
+    <script src="{{url('public/js/morris.js')}}"></script>
     <!-- SB Admin Scripts - Include with every page -->
-    <script src=<?php echo '"'.url("public/js/sb-admin.js").'"';?>></script>
-    <script src=<?php echo '"'.url("/mobile-detection.js").'"';?>></script>
+    <script src="{{url('public/js/sb-admin.js')}}"></script>
+    <script src="{{url('mobile-detection.js')}}"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("#health-group-b").hide();

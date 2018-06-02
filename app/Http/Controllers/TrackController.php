@@ -15,26 +15,7 @@ class TrackController extends Controller
 {
 	public function init_track(){
 		$query=Subjek::all();
-		return view("init_track", ['query' => $query]);
-	}
-	public function single_track($id,$id1,$id2){
-		$tanggal=$id2."-".$id1."-"."1";
-		$tanggal2=$id2."-".$id1."-"."30";
-        $data['subjek']=Subjek::all();
-        $subject_target = Subjek::where('id',$id)->first();
-        $data['name']=$subject_target->Name;
-        $data['record'] = Rekor_medis::whereBetween('Datetime', array($tanggal, $tanggal2))->where('Subject', '=', $id)->where('User', '=', Auth::user()->id)->get();
-        if($subject_target->Type==0)
-		return view("old/track0",$data);
-		else if($subject_target->Type==1)
-		return view("old/track1",$data);
-		/*$query=Subjek::whereBetween('Datetime', array($tanggal, $tanggal2))->where('Subject', '=', $id)->get();
-		if($query->Type==0){
-		return view("track0", ['query' => $query]);
-		}
-		if($query->Type==1){
-		return view("track1", ['query' => $query]);
-		}*/
+		return view("track.init", ['query' => $query]);
 	}
 	public function initialTrack(){
 		$user = Auth::user();
@@ -58,7 +39,7 @@ class TrackController extends Controller
 		$data['currentMonth'] = date('m');
 		$data['nextMonth'] = date('m',$upperDate);
 		$data['timelineTitle'] = "Timeline";
-		return view("trackview", $data);
+		return view("track.view", $data);
 	}
 	public function filterTrack(Request $filter)
 	{
@@ -99,7 +80,7 @@ class TrackController extends Controller
 		$data['currentMonth'] = date('m',$rawFilterDate);
 		$data['nextMonth'] = date('m',$upperDate);
 		$data['timelineTitle'] = "Timeline tanggal ".date('d F Y',$rawFilterDate);
-		return view("trackview", $data);
+		return view("track.view", $data);
 	}
 	public function getDetail(Request $req)
 	{

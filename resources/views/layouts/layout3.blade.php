@@ -20,7 +20,7 @@
 </head>
 
 <body style="background-color: #ffffff;padding-top: 0px;">
-<div class="container-fluid" style="padding: 0px;">
+<div class="container" style="padding: 0px;">
     <div class="col-xs-3 layout-sidebar" >
         <div class="row">
             <div class="col-xs-12 layout-title-box">

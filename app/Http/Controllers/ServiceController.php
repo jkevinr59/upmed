@@ -38,5 +38,6 @@ class ServiceController extends Controller
 		$query[$i]->kondisi_isi=$kondisi[0]->deskripsi;
 		$query[$i]->pesan_isi=$pesan[0]->message;
 	 }
+	 return $query;
  }
 }

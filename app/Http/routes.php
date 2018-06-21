@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
  */
+use App\Classes\AnalyzerClass as Analyzer;
 
 Route::get('/', 'HomeController@index');
 Route::post('/trial',['before'=>'csrf','uses'=> 'HomeController@register']);
@@ -43,6 +44,12 @@ Route::get('/mail', 'MailController@newMail');
 Route::post('/mail','MailController@saveMail');
 Route::get('/inbox','MailController@inbox');
 Route::post('/inbox/view','MailController@mailView');
+
+Route::get('/tesrekom',function(){
+	$analyzer = new Analyzer();
+	
+	dd($analyzer->doAnalyze(20,10));
+});
 
 Route::get('/newhome',function(){
 	return view('prototype');

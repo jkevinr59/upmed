@@ -46,9 +46,8 @@ Route::get('/inbox','MailController@inbox');
 Route::post('/inbox/view','MailController@mailView');
 
 Route::get('/tesrekom',function(){
-	$analyzer = new Analyzer();
-	
-	dd($analyzer->doAnalyze(20,2,"1 April 2018"));
+	$analyzer = new Analyzer(20,2,"1 April 2018");
+	$analyzer->doAnalyze();
 });
 
 Route::get('/newhome',function(){
